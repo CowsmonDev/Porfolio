@@ -13,86 +13,51 @@ export function TechStack() {
 
             <div className="relative z-10 mx-auto max-w-[1440px] w-full px-4 lg:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-                    {/* Left Column - Philosophy */}
+                    {/* Left Column - Sobre Mí */}
                     <div className="flex flex-col gap-10">
                         <div className="flex flex-col gap-6 text-left">
                             <div className="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
                                 <span className="w-2 h-2 rounded-full bg-primary" />
-                                Mentalidad de Ingeniería
+                                Formación Continua.
                             </div>
 
-                            <h2 className="text-4xl md:text-5xl font-black leading-tight">
-                                Pensamiento Estructurado. <br />
-                                <span className="text-muted-foreground">
-                                    Sistemas Resilientes.
-                                </span>
+                            <h2 className="text-4xl md:text-4xl font-black leading-tight">
+                                Sobre Mi
                             </h2>
 
                             <div className="text-muted-foreground text-lg leading-relaxed space-y-6">
                                 <p>
-                                    Mi enfoque en la ingeniería de sistemas se
-                                    basa en la{" "}
+                                    Mi camino en la programación comenzó en{" "}
                                     <strong className="text-white">
-                                        estructura
-                                    </strong>{" "}
-                                    y la{" "}
-                                    <strong className="text-white">
-                                        eficiencia
+                                        4° año de secundaria (2016)
                                     </strong>
-                                    . No solo escribo código; arquitecto
-                                    soluciones de alta disponibilidad que
-                                    resisten la escala, centrándome en
-                                    desacoplar la complejidad y garantizar la
-                                    tolerancia a fallos.
+                                    , donde descubrí la lógica computacional y
+                                    empecé a resolver problemas con código. Esa
+                                    curiosidad me llevó a estudiar{" "}
+                                    <strong className="text-white">
+                                        Ingeniería en Sistemas
+                                    </strong>{" "}
+                                    en la universidad, donde profundicé en
+                                    fundamentos teóricos, estructuras de datos y
+                                    arquitectura de software.
                                 </p>
                                 <p>
-                                    Mi flujo de trabajo está potenciado por{" "}
+                                    Pero el aprendizaje no terminó en las aulas.
+                                    De forma{" "}
                                     <strong className="text-white">
-                                        Obsidian
+                                        autodidacta
+                                    </strong>
+                                    , mis conocimientos previos me permitieron
+                                    profundizar en tecnologías modernas:
+                                    patrones de diseño, arquitecturas
+                                    escalables, y las mejores prácticas de la
+                                    industria. Esta combinación de{" "}
+                                    <strong className="text-white">
+                                        educación formal y exploración
+                                        independiente
                                     </strong>{" "}
-                                    para la gestión del conocimiento
-                                    interconectado, asegurando que cada decisión
-                                    arquitectónica esté documentada y sea
-                                    recuperable. Combinado con la velocidad de{" "}
-                                    <strong className="text-white">Vim</strong>,
-                                    mantengo una velocidad de desarrollo que
-                                    coincide con las demandas de los sistemas
-                                    distribuidos.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Features */}
-                        <div className="flex flex-col gap-6 border-l border-border pl-6 ml-2">
-                            <div>
-                                <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
-                                    <span className="text-primary">⌘</span>
-                                    Conocimiento Estructurado
-                                </h4>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Aprovechando Obsidian para crear un gráfico
-                                    persistente de decisiones arquitectónicas.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
-                                    <span className="text-primary">▶</span>
-                                    Eficiencia Primero
-                                </h4>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Flujo de trabajo centrado en el teclado
-                                    basado en Vim para una navegación de código
-                                    rápida.
-                                </p>
-                            </div>
-                            <div>
-                                <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
-                                    <span className="text-primary">◆</span>
-                                    Alta Disponibilidad
-                                </h4>
-                                <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Diseño de sistemas distribuidos tolerantes a
-                                    fallos que nunca duermen.
+                                    me permite abordar proyectos con una visión
+                                    integral y actualizada.
                                 </p>
                             </div>
                         </div>
@@ -112,8 +77,8 @@ export function TechStack() {
                                     </h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm max-w-md">
-                                    Drivers principales para aplicaciones de
-                                    grado empresarial.
+                                    Mis Herramientas Esenciales en la creacion
+                                    de soluciones
                                 </p>
                                 <div className="h-px w-full bg-border my-2" />
                                 <div className="flex flex-wrap gap-3">
@@ -130,7 +95,7 @@ export function TechStack() {
                                         TypeScript
                                     </span>
                                     <span className="px-3 py-1 bg-secondary text-muted-foreground text-sm font-mono rounded border border-border">
-                                        Node.js
+                                        Nextjs
                                     </span>
                                 </div>
                             </div>
