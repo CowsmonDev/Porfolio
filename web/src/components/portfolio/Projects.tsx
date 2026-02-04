@@ -31,41 +31,42 @@ interface Project {
 const projects: Project[] = [
     {
         id: "cache",
-        title: "Distributed Cache Service",
+        title: "Servicio de Caché Distribuido",
         description:
-            "High-performance distributed cache with strong consistency guarantees.",
+            "Caché distribuido de alto rendimiento con garantías de consistencia fuerte.",
         technologies: ["Java", "Spring Boot", "Hazelcast"],
         architecturalDecisions:
-            "Implemented a Near-Cache pattern to reduce network hops for hot keys, combined with an asynchronous write-behind policy.",
+            "Implementación de patrón Near-Cache para reducir saltos de red en claves frecuentes, combinado con política de escritura asíncrona (write-behind).",
         databaseModel:
-            "Hybrid approach utilizing Redis for volatile session data and persistent PostgreSQL tables for cache warm-up strategies.",
+            "Enfoque híbrido utilizando Redis para sesiones volátiles y tablas PostgreSQL persistentes para estrategias de calentamiento de caché.",
         systemChallenges:
-            "Handling cache stampedes during service restart cycles.",
+            "Manejo de estampidas de caché durante ciclos de reinicio del servicio.",
     },
     {
         id: "auth",
-        title: "Centralized Auth Service",
+        title: "Servicio de Autenticación Centralizado",
         description:
-            "OIDC provider supporting multi-factor authentication flows.",
+            "Proveedor OIDC con soporte para flujos de autenticación multifactor.",
         technologies: ["NestJS", "OAuth2", "TypeORM"],
         architecturalDecisions:
-            "Microservice designed with Hexagonal Architecture to decouple core auth logic from OIDC adapters and database drivers.",
+            "Microservicio diseñado con Arquitectura Hexagonal para desacoplar la lógica core de los adaptadores OIDC y drivers de base de datos.",
         databaseModel:
-            "Self-referencing Role/Permission tables with recursive queries for granular ACL resolution.",
+            "Tablas de Rol/Permiso auto-referenciales con consultas recursivas para resolución granular de ACL.",
         systemChallenges:
-            "Token revocation propagation across distributed services.",
+            "Propagación de revocación de tokens a través de servicios distribuidos.",
     },
     {
         id: "monitor",
-        title: "Infrastructure Health Monitor",
-        description: "Real-time anomaly detection for microservices fleet.",
+        title: "Monitor de Salud de Infraestructura",
+        description:
+            "Detección de anomalías en tiempo real para flota de microservicios.",
         technologies: ["Java", "Kafka", "TimescaleDB"],
         architecturalDecisions:
-            "Event-driven architecture buffering metrics in Kafka before batch-inserting into TimescaleDB to handle write pressure.",
+            "Arquitectura orientada a eventos buferizando métricas en Kafka antes de inserción por lotes en TimescaleDB para manejar presión de escritura.",
         databaseModel:
-            "Hypertable design with time-partitioning chunks to optimize query speed for recent metrics.",
+            "Diseño de hipertabla con particionado temporal para optimizar velocidad de consulta en métricas recientes.",
         systemChallenges:
-            "Ingesting 1M+ metric points per second without backpressure.",
+            "Ingesta de 1M+ puntos de métrica por segundo sin contrapresión.",
     },
 ];
 
@@ -78,7 +79,7 @@ export function Projects() {
                     <div className="flex items-center gap-3">
                         <span className="w-3 h-3 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a1123b]" />
                         <p className="text-primary text-sm font-bold tracking-widest uppercase">
-                            Live Production
+                            En Producción
                         </p>
                     </div>
 
@@ -88,15 +89,15 @@ export function Projects() {
                             <div className="p-8 lg:p-12 flex flex-col justify-center flex-1 gap-6 border-b lg:border-b-0 lg:border-r border-border">
                                 <CardHeader className="p-0">
                                     <CardTitle className="text-3xl">
-                                        Enterprise Rental Architecture
+                                        Arquitectura de Alquiler Empresarial
                                     </CardTitle>
                                     <CardDescription className="text-base leading-relaxed">
-                                        Architected a complete Monolith to
-                                        Microservices migration. Features
-                                        complex JPA modeling with TPT
-                                        inheritance for property types,
-                                        event-driven bookings, and
-                                        high-concurrency payment processing.
+                                        Arquitectura completa de migración de
+                                        Monolito a Microservicios. Incluye
+                                        modelado JPA complejo con herencia TPT,
+                                        reservas orientadas a eventos y
+                                        procesamiento de pagos de alta
+                                        concurrencia.
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="p-0 flex flex-col gap-4">
@@ -104,21 +105,22 @@ export function Projects() {
                                         <div className="flex items-center gap-3 text-muted-foreground">
                                             <CheckCircle className="w-4 h-4 text-primary" />
                                             <span className="text-sm">
-                                                TPT Inheritance for Property
-                                                Models
+                                                Herencia TPT para Modelos de
+                                                Propiedad
                                             </span>
                                         </div>
                                         <div className="flex items-center gap-3 text-muted-foreground">
                                             <CheckCircle className="w-4 h-4 text-primary" />
                                             <span className="text-sm">
-                                                Complex Multi-Tenant JPA
-                                                Relationships
+                                                Relaciones JPA Multi-Tenant
+                                                Complejas
                                             </span>
                                         </div>
                                         <div className="flex items-center gap-3 text-muted-foreground">
                                             <CheckCircle className="w-4 h-4 text-primary" />
                                             <span className="text-sm">
-                                                Spring Cloud Gateway Integration
+                                                Integración con Spring Cloud
+                                                Gateway
                                             </span>
                                         </div>
                                     </div>
@@ -126,11 +128,11 @@ export function Projects() {
                                     <div className="flex gap-3">
                                         <Button size="lg">
                                             <ExternalLink className="w-4 h-4" />
-                                            View Architecture
+                                            Ver Arquitectura
                                         </Button>
                                         <Button variant="secondary" size="lg">
                                             <Github className="w-4 h-4" />
-                                            Source Code
+                                            Código Fuente
                                         </Button>
                                     </div>
                                 </CardContent>
@@ -219,7 +221,7 @@ export function Projects() {
                                     <div className="grid md:grid-cols-3 gap-8 mt-4">
                                         <div>
                                             <h5 className="text-xs font-bold mb-2 uppercase tracking-wide text-muted-foreground">
-                                                Architectural Decisions
+                                                Decisiones Arquitectónicas
                                             </h5>
                                             <p className="text-muted-foreground text-sm leading-relaxed">
                                                 {project.architecturalDecisions}
@@ -227,7 +229,7 @@ export function Projects() {
                                         </div>
                                         <div>
                                             <h5 className="text-xs font-bold mb-2 uppercase tracking-wide text-muted-foreground">
-                                                Database Model
+                                                Modelo de Base de Datos
                                             </h5>
                                             <p className="text-muted-foreground text-sm leading-relaxed">
                                                 {project.databaseModel}
@@ -235,7 +237,7 @@ export function Projects() {
                                         </div>
                                         <div className="flex items-start flex-col">
                                             <h5 className="text-xs font-bold mb-2 uppercase tracking-wide text-muted-foreground">
-                                                System Challenges
+                                                Desafíos del Sistema
                                             </h5>
                                             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                                                 {project.systemChallenges}
@@ -245,7 +247,7 @@ export function Projects() {
                                                 className="w-full"
                                             >
                                                 <Github className="w-4 h-4" />
-                                                View Repository
+                                                Ver Repositorio
                                             </Button>
                                         </div>
                                     </div>

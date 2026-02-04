@@ -1,5 +1,5 @@
 export { Header } from "./Header";
-export { Hero } from "./Hero";
+export { Hero } from "./hero";
 export { TechStack } from "./TechStack";
 export { Projects } from "./Projects";
 export { Journey } from "./Journey";
