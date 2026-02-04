@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     title: "Agustín - Systems Engineering Portfolio",
     description:
         "Systems Engineer specializing in high-scale Distributed Systems and Microservices. Expert in Java Spring Boot, NestJS, and complex PostgreSQL modeling.",
+    icons: {
+        icon: "/Logo.png",
+    },
 };
 
 export default function RootLayout({

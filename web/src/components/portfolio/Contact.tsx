@@ -9,19 +9,19 @@ import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 const socialLinks = [
     {
         name: "GitHub",
-        description: "Check out my repositories and contributions.",
+        description: "Mira mis repositorios y contribuciones.",
         icon: Github,
         href: "https://github.com/your-username",
     },
     {
         name: "LinkedIn",
-        description: "Let's network and discuss opportunities.",
+        description: "Conectemos y hablemos de oportunidades.",
         icon: Linkedin,
         href: "https://linkedin.com/in/your-username",
     },
     {
         name: "Email",
-        description: "Direct contact for inquiries.",
+        description: "Contacto directo para consultas.",
         icon: Mail,
         href: "mailto:your-email@example.com",
     },
@@ -36,11 +36,11 @@ export function Contact() {
                     <div className="flex flex-col gap-8">
                         <div>
                             <h2 className="text-3xl md:text-5xl font-black mb-4">
-                                Let&apos;s Connect
+                                Conectemos
                             </h2>
                             <p className="text-muted-foreground text-lg">
-                                Interested in scalable architecture? Fill out
-                                the form below or connect via social platforms.
+                                ¿Interesado en arquitectura escalable? Completa
+                                el formulario o conecta por redes.
                             </p>
                         </div>
                         <form
@@ -48,11 +48,11 @@ export function Contact() {
                             onSubmit={(e) => e.preventDefault()}
                         >
                             <div className="flex flex-col gap-2">
-                                <Label htmlFor="name">Name</Label>
+                                <Label htmlFor="name">Nombre</Label>
                                 <Input
                                     id="name"
                                     type="text"
-                                    placeholder="Jane Doe"
+                                    placeholder="Juan Pérez"
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
@@ -60,19 +60,19 @@ export function Contact() {
                                 <Input
                                     id="email"
                                     type="email"
-                                    placeholder="jane@example.com"
+                                    placeholder="juan@ejemplo.com"
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <Label htmlFor="message">Message</Label>
+                                <Label htmlFor="message">Mensaje</Label>
                                 <Textarea
                                     id="message"
                                     rows={4}
-                                    placeholder="Let's discuss distributed systems..."
+                                    placeholder="Hablemos de sistemas distribuidos..."
                                 />
                             </div>
                             <Button type="submit" size="lg" className="mt-2">
-                                Send Message
+                                Enviar Mensaje
                             </Button>
                         </form>
                     </div>

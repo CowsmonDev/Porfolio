@@ -18,44 +18,46 @@ export function TechStack() {
                         <div className="flex flex-col gap-6 text-left">
                             <div className="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
                                 <span className="w-2 h-2 rounded-full bg-primary" />
-                                The Engineering Mindset
+                                Mentalidad de Ingeniería
                             </div>
 
                             <h2 className="text-4xl md:text-5xl font-black leading-tight">
-                                Structured Thinking. <br />
+                                Pensamiento Estructurado. <br />
                                 <span className="text-muted-foreground">
-                                    Resilient Systems.
+                                    Sistemas Resilientes.
                                 </span>
                             </h2>
 
                             <div className="text-muted-foreground text-lg leading-relaxed space-y-6">
                                 <p>
-                                    My approach to systems engineering is
-                                    grounded in{" "}
+                                    Mi enfoque en la ingeniería de sistemas se
+                                    basa en la{" "}
                                     <strong className="text-white">
-                                        structure
+                                        estructura
                                     </strong>{" "}
-                                    and{" "}
+                                    y la{" "}
                                     <strong className="text-white">
-                                        efficiency
+                                        eficiencia
                                     </strong>
-                                    . I don&apos;t just write code; I architect
-                                    high-availability solutions that stand the
-                                    test of scale, focusing on decoupling
-                                    complexity and ensuring fault tolerance.
+                                    . No solo escribo código; arquitecto
+                                    soluciones de alta disponibilidad que
+                                    resisten la escala, centrándome en
+                                    desacoplar la complejidad y garantizar la
+                                    tolerancia a fallos.
                                 </p>
                                 <p>
-                                    My workflow is powered by{" "}
+                                    Mi flujo de trabajo está potenciado por{" "}
                                     <strong className="text-white">
                                         Obsidian
                                     </strong>{" "}
-                                    for interconnected knowledge management,
-                                    ensuring that every architectural decision
-                                    is documented and retrievable. Combined with
-                                    the speed of{" "}
+                                    para la gestión del conocimiento
+                                    interconectado, asegurando que cada decisión
+                                    arquitectónica esté documentada y sea
+                                    recuperable. Combinado con la velocidad de{" "}
                                     <strong className="text-white">Vim</strong>,
-                                    I maintain a development velocity that
-                                    matches the demands of distributed systems.
+                                    mantengo una velocidad de desarrollo que
+                                    coincide con las demandas de los sistemas
+                                    distribuidos.
                                 </p>
                             </div>
                         </div>
@@ -65,31 +67,32 @@ export function TechStack() {
                             <div>
                                 <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
                                     <span className="text-primary">⌘</span>
-                                    Structured Knowledge
+                                    Conocimiento Estructurado
                                 </h4>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Leveraging Obsidian to create a persistent
-                                    graph of architectural decisions.
+                                    Aprovechando Obsidian para crear un gráfico
+                                    persistente de decisiones arquitectónicas.
                                 </p>
                             </div>
                             <div>
                                 <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
                                     <span className="text-primary">▶</span>
-                                    Efficiency First
+                                    Eficiencia Primero
                                 </h4>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Vim-based keyboard-centric workflow for
-                                    rapid code navigation.
+                                    Flujo de trabajo centrado en el teclado
+                                    basado en Vim para una navegación de código
+                                    rápida.
                                 </p>
                             </div>
                             <div>
                                 <h4 className="text-white font-bold text-lg mb-1 flex items-center gap-2">
                                     <span className="text-primary">◆</span>
-                                    High Availability
+                                    Alta Disponibilidad
                                 </h4>
                                 <p className="text-muted-foreground text-sm leading-relaxed">
-                                    Designing fault-tolerant distributed systems
-                                    that never sleep.
+                                    Diseño de sistemas distribuidos tolerantes a
+                                    fallos que nunca duermen.
                                 </p>
                             </div>
                         </div>
@@ -105,12 +108,12 @@ export function TechStack() {
                                         ◇
                                     </span>
                                     <h3 className="text-2xl font-bold">
-                                        Core Stack
+                                        Stack Principal
                                     </h3>
                                 </div>
                                 <p className="text-muted-foreground text-sm max-w-md">
-                                    Primary drivers for enterprise-grade
-                                    applications.
+                                    Drivers principales para aplicaciones de
+                                    grado empresarial.
                                 </p>
                                 <div className="h-px w-full bg-border my-2" />
                                 <div className="flex flex-wrap gap-3">

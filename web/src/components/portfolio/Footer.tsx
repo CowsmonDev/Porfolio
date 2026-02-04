@@ -51,8 +51,8 @@ export function Footer() {
 
                     {/* Copyright */}
                     <div className="text-muted-foreground/60 text-sm">
-                        © {new Date().getFullYear()} Agustín. All rights
-                        reserved.
+                        © {new Date().getFullYear()} Agustín. Todos los derechos
+                        reservados.
                     </div>
                 </div>
             </div>
