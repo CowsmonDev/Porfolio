@@ -5,14 +5,14 @@ import { HeroStats } from "./HeroStats";
 import { CodeBlock } from "./CodeBlock";
 
 const heroStats = [
-    { value: "6+", label: "Años Exp.", highlight: true },
-    { value: "25+", label: "Microservicios" },
-    { value: "2k+", label: "Nodos Obsidian" },
+    { value: "10", label: "Años Resolviendo Problemas", highlight: true },
+    { value: "3", label: "Proyectos Ambiciosos" },
+    { value: "2.5k+", label: "Tazas de Café" },
 ];
 
 export function Hero() {
     return (
-        <section id="hero" className="relative flex flex-col pt-20">
+        <section id="hero" className="relative flex flex-col pt-10">
             {/* Grid Background */}
             <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none z-0" />
 
