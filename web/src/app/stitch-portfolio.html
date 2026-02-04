@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agustín - Systems Engineering Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#a1123b",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#1A1A1A",
+                        "concrete-dark": "#222222",
+                        "concrete-light": "#2A2A2A",
+                        "burgundy-glow": "#9f1239",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"],
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    backgroundImage: {
+                        'grid-pattern': "linear-gradient(to right, #333 1px, transparent 1px), linear-gradient(to bottom, #333 1px, transparent 1px)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #2a2a2a 1px, transparent 1px), linear-gradient(to bottom, #2a2a2a 1px, transparent 1px);
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-x-hidden">
+<div class="fixed top-0 z-50 w-full border-b border-[#333] bg-[#1A1A1A]/95 backdrop-blur-sm">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 lg:px-12 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<header class="flex items-center justify-between whitespace-nowrap px-4 lg:px-0 py-3">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 flex items-center justify-center bg-primary rounded text-white font-bold font-mono text-sm">
+                                &lt;/&gt;
+                            </div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">AG</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<div class="flex items-center gap-9">
+<a class="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal" href="#about-tech">Philosophy &amp; Tech</a>
+<a class="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal" href="#projects">Engineering</a>
+<a class="text-gray-300 hover:text-white transition-colors text-sm font-medium leading-normal" href="#experience">Journey</a>
+</div>
+<button class="flex items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-red-800 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-[0_0_15px_rgba(161,18,59,0.5)]">
+<span class="material-symbols-outlined mr-2 text-[20px]">download</span>
+<span class="truncate">Resume</span>
+</button>
+</div>
+<div class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</div>
+</header>
+</div>
+</div>
+</div>
+</div>
+<div class="relative flex flex-col pt-20" id="hero">
+<div class="absolute inset-0 grid-bg opacity-20 pointer-events-none z-0"></div>
+<div class="layout-container flex h-full grow flex-col z-10">
+<div class="px-4 lg:px-12 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<div class="@container">
+<div class="flex flex-col gap-12 px-0 py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-24">
+<div class="flex flex-col gap-8 flex-1 max-w-2xl text-left">
+<div class="flex flex-col gap-4 text-left">
+<div class="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                                        System Online
+                                    </div>
+<h1 class="text-white text-5xl md:text-7xl font-black leading-tight tracking-[-0.033em]">
+                                        Architecting <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-gray-500">Digital Concrete</span>
+</h1>
+<h2 class="text-gray-400 text-lg md:text-xl font-normal leading-relaxed max-w-[600px] text-left">
+                                        Systems Engineer specializing in high-scale Distributed Systems and Microservices. Expert in Java Spring Boot, NestJS, and complex PostgreSQL modeling.
+                                    </h2>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-6 bg-primary hover:bg-red-800 transition-colors text-white text-base font-bold shadow-[0_4px_14px_0_rgba(161,18,59,0.39)]">
+                                        View Architecture
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-6 border border-[#333] hover:bg-[#2A2A2A] hover:border-gray-500 transition-all text-white text-base font-medium">
+                                        Contact Me
+                                    </button>
+</div>
+<div class="flex gap-6 pt-4">
+<div class="flex flex-col gap-1 border-l-2 border-primary pl-4">
+<p class="text-white text-3xl font-bold font-mono">6+</p>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wide">Years Exp.</p>
+</div>
+<div class="flex flex-col gap-1 border-l-2 border-[#333] pl-4">
+<p class="text-white text-3xl font-bold font-mono">25+</p>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wide">Microservices</p>
+</div>
+<div class="flex flex-col gap-1 border-l-2 border-[#333] pl-4">
+<p class="text-white text-3xl font-bold font-mono">2k+</p>
+<p class="text-gray-400 text-sm font-medium uppercase tracking-wide">Obsidian Nodes</p>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-[600px] xl:w-[700px] flex justify-center lg:justify-end">
+<div class="w-full rounded-lg overflow-hidden bg-[#0d0d0d] border border-[#333] shadow-2xl font-mono text-sm relative group hover:border-primary/50 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 py-2 bg-[#1a1a1a] border-b border-[#333]">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+<div class="w-3 h-3 rounded-full bg-green-500"></div>
+</div>
+<div class="text-gray-500 text-xs">Engineer.ts</div>
+<div class="w-8"></div>
+</div>
+<div class="p-6 text-gray-300 overflow-x-auto">
+<pre><code><span class="text-primary">class</span> <span class="text-yellow-400">Engineer</span> {
+  <span class="text-purple-400">public</span> name: <span class="text-blue-400">string</span>;
+  <span class="text-purple-400">public</span> lastName: <span class="text-blue-400">string</span>;
+  <span class="text-purple-400">public</span> focus: <span class="text-blue-400">string</span>[];
+  <span class="text-purple-400">public</span> stack: <span class="text-blue-400">string</span>[];
+  <span class="text-primary">constructor</span>(name: <span class="text-blue-400">string</span>, lastName: <span class="text-blue-400">string</span>) {
+    <span class="text-blue-400">this</span>.name = name;
+    <span class="text-blue-400">this</span>.lastName = lastName;
+    <span class="text-blue-400">this</span>.focus = [
+        <span class="text-green-400">'Distributed Systems'</span>, 
+        <span class="text-green-400">'Systems Architecture'</span>
+    ];
+    <span class="text-blue-400">this</span>.stack = [
+        <span class="text-green-400">'Java/Spring Boot'</span>, 
+        <span class="text-green-400">'NestJS'</span>, 
+        <span class="text-green-400">'PostgreSQL'</span>
+    ];
+  }
+}
+<span class="text-purple-400">const</span> agustin = <span class="text-primary">new</span> <span class="text-yellow-400">Engineer</span>(
+  <span class="text-green-400">'Agustín'</span>, 
+  <span class="text-green-400">'Systems'</span>
+);</code></pre>
+</div>
+<div class="border-t border-[#333] p-2 bg-[#111] text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-green-500 text-[14px]">check_circle</span>
+<span class="text-green-500">Compiled Successfully (tsc)</span>
+<span class="text-gray-600 ml-auto">0s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-[#1A1A1A] py-24 border-t border-[#2a2a2a] relative overflow-hidden" id="about-tech">
+<div class="absolute right-0 top-0 h-full w-1/2 opacity-[0.02] pointer-events-none overflow-hidden flex items-center justify-end">
+<span class="material-symbols-outlined text-[600px] text-white -mr-40 rotate-12">hub</span>
+</div>
+<div class="layout-container flex justify-center z-10 relative">
+<div class="px-4 lg:px-12 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+<div class="flex flex-col gap-10">
+<div class="flex flex-col gap-6 text-left">
+<div class="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                                    The Engineering Mindset
+                                </div>
+<h2 class="text-white text-4xl md:text-5xl font-black leading-tight">
+                                    Structured Thinking. <br/> <span class="text-gray-500">Resilient Systems.</span>
+</h2>
+<div class="text-gray-400 text-lg leading-relaxed space-y-6">
+<p>
+                                        My approach to systems engineering is grounded in <strong>structure</strong> and <strong>efficiency</strong>. 
+                                        I don't just write code; I architect high-availability solutions that stand the test of scale, focusing on decoupling complexity and ensuring fault tolerance.
+                                    </p>
+<p>
+                                        My workflow is powered by <strong class="text-white">Obsidian</strong> for interconnected knowledge management, ensuring that every architectural decision is documented and retrievable. 
+                                        Combined with the speed of <strong class="text-white">Vim</strong>, I maintain a development velocity that matches the demands of distributed systems.
+                                    </p>
+</div>
+</div>
+<div class="flex flex-col gap-6 border-l border-[#333] pl-6 ml-2">
+<div class="group">
+<h4 class="text-white font-bold text-lg mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">account_tree</span>
+                                        Structured Knowledge
+                                    </h4>
+<p class="text-gray-500 text-sm leading-relaxed">Leveraging Obsidian to create a persistent graph of architectural decisions.</p>
+</div>
+<div class="group">
+<h4 class="text-white font-bold text-lg mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">terminal</span>
+                                        Efficiency First
+                                    </h4>
+<p class="text-gray-500 text-sm leading-relaxed">Vim-based keyboard-centric workflow for rapid code navigation.</p>
+</div>
+<div class="group">
+<h4 class="text-white font-bold text-lg mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">dns</span>
+                                        High Availability
+                                    </h4>
+<p class="text-gray-500 text-sm leading-relaxed">Designing fault-tolerant distributed systems that never sleep.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-2 text-gray-500 font-mono text-sm font-bold tracking-widest uppercase mb-2 lg:hidden">
+                                Technical Arsenal
+                            </div>
+<div class="relative p-6 lg:p-8 rounded-xl bg-[#1e1e1e] border border-[#333] border-l-4 border-l-primary shadow-2xl overflow-hidden group hover:bg-[#202020] transition-colors">
+<div class="absolute right-4 top-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-8xl">code_blocks</span>
+</div>
+<div class="flex flex-col gap-4 relative z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">layers</span>
+<h3 class="text-2xl font-bold text-white">Core Stack</h3>
+</div>
+<p class="text-gray-400 text-sm max-w-md">Primary drivers for enterprise-grade applications.</p>
+<div class="h-px w-full bg-[#333] my-2"></div>
+<div class="flex flex-wrap gap-3">
+<span class="px-3 py-1 bg-[#2a2a2a] text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">Java 17+</span>
+<span class="px-3 py-1 bg-[#2a2a2a] text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">Spring Boot</span>
+<span class="px-3 py-1 bg-[#2a2a2a] text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">NestJS</span>
+<span class="px-3 py-1 bg-[#2a2a2a] text-gray-300 text-sm font-mono rounded border border-[#333]">TypeScript</span>
+<span class="px-3 py-1 bg-[#2a2a2a] text-gray-300 text-sm font-mono rounded border border-[#333]">Node.js</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 rounded-xl border border-[#333] bg-[#1e1e1e] hover:border-gray-500 transition-colors flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-gray-300">
+<span class="material-symbols-outlined">database</span>
+</div>
+<h3 class="text-white font-bold text-lg">Data Engineering</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">PostgreSQL</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Hibernate/JPA</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Redis</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">TPT Inheritance</span>
+</div>
+</div>
+<div class="p-6 rounded-xl border border-[#333] bg-[#1e1e1e] hover:border-gray-500 transition-colors flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-gray-300">
+<span class="material-symbols-outlined">build</span>
+</div>
+<h3 class="text-white font-bold text-lg">Tools &amp; Ops</h3>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Vim (Neovim)</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Obsidian</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Docker</span>
+<span class="px-2 py-1 bg-[#151515] text-gray-400 text-xs font-mono rounded border border-[#2a2a2a]">Kubernetes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-20 bg-background-dark" id="projects">
+<div class="layout-container flex justify-center">
+<div class="px-4 lg:px-12 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a1123b]"></span>
+<p class="text-primary text-sm font-bold tracking-widest uppercase">Live Production</p>
+</div>
+<div class="rounded-2xl bg-[#1e1e1e] border border-[#333] overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+<div class="p-8 lg:p-12 flex flex-col justify-center flex-1 gap-6 border-b lg:border-b-0 lg:border-r border-[#333]">
+<div>
+<h3 class="text-3xl font-bold text-white mb-2">Enterprise Rental Architecture</h3>
+<p class="text-gray-400 text-base leading-relaxed">
+                                        Architected a complete Monolith to Microservices migration. Features complex JPA modeling with TPT inheritance for property types, event-driven bookings, and high-concurrency payment processing.
+                                    </p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-3 text-gray-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-sm">TPT Inheritance for Property Models</span>
+</div>
+<div class="flex items-center gap-3 text-gray-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-sm">Complex Multi-Tenant JPA Relationships</span>
+</div>
+<div class="flex items-center gap-3 text-gray-300">
+<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+<span class="text-sm">Spring Cloud Gateway Integration</span>
+</div>
+</div>
+<div class="pt-4 flex gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold hover:bg-red-800 transition-colors">
+                                        View Architecture
+                                    </button>
+<button class="flex items-center justify-center rounded-lg h-10 px-5 bg-[#2a2a2a] text-white text-sm font-bold hover:bg-[#333] transition-colors">
+                                        Source Code
+                                    </button>
+</div>
+</div>
+<div class="flex-1 bg-[#111] p-8 lg:p-12 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+<div class="w-full max-w-md rounded-lg bg-[#0d0d0d] border border-[#333] font-mono text-sm shadow-2xl z-10">
+<div class="flex items-center justify-between px-4 py-2 bg-[#1a1a1a] border-b border-[#333]">
+<span class="text-xs text-green-500 font-bold">POST /api/v1/orchestration/rentals</span>
+<span class="text-xs text-gray-500">201 Created</span>
+</div>
+<div class="p-6 text-gray-300">
+<pre><code>{
+  <span class="text-blue-400">"transaction_id"</span>: <span class="text-green-400">"tx_9981_saga_alpha"</span>,
+  <span class="text-blue-400">"orchestration"</span>: {
+    <span class="text-blue-400">"service"</span>: <span class="text-green-400">"rental-core"</span>,
+    <span class="text-blue-400">"strategy"</span>: <span class="text-green-400">"SAGA_PATTERN"</span>,
+    <span class="text-blue-400">"latency_ms"</span>: <span class="text-yellow-400">14</span>
+  },
+  <span class="text-blue-400">"entity_graph"</span>: {
+    <span class="text-blue-400">"property"</span>: {
+        <span class="text-blue-400">"id"</span>: <span class="text-green-400">"prop_lux_01"</span>,
+        <span class="text-blue-400">"polymorphism"</span>: <span class="text-green-400">"TABLE_PER_CLASS"</span>
+    },
+    <span class="text-blue-400">"billing"</span>: {
+        <span class="text-blue-400">"status"</span>: <span class="text-green-400">"CAPTURED"</span>,
+        <span class="text-blue-400">"ledger"</span>: <span class="text-green-400">"double_entry_v9"</span>
+    }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 pt-4">
+<details class="group rounded-xl bg-[#1e1e1e] border border-[#333] open:border-primary/50 overflow-hidden transition-all duration-300">
+<summary class="list-none flex flex-col md:flex-row items-start md:items-center justify-between p-6 cursor-pointer hover:bg-[#252525] transition-colors relative z-10 [&amp;::-webkit-details-marker]:hidden">
+<div class="flex flex-col gap-1 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Distributed Cache Service</h4>
+<p class="text-gray-400 text-sm">High-performance distributed cache with strong consistency guarantees.</p>
+</div>
+<div class="flex items-center gap-4 mt-4 md:mt-0 shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">Java</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">Spring Boot</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">Hazelcast</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 transform group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-6 pb-6 pt-2 bg-[#1a1a1a] border-t border-[#333]">
+<div class="grid md:grid-cols-3 gap-8 mt-2">
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Architectural Decisions</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Implemented a Near-Cache pattern to reduce network hops for hot keys, combined with an asynchronous write-behind policy.</p>
+</div>
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Database Model</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Hybrid approach utilizing Redis for volatile session data and persistent PostgreSQL tables for cache warm-up strategies.</p>
+</div>
+<div class="flex items-start flex-col">
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">System Challenges</h5>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">Handling cache stampedes during service restart cycles.</p>
+<a class="flex items-center gap-2 text-white bg-[#2a2a2a] hover:bg-primary px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-[#333] w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                                View Repository
+                                            </a>
+</div>
+</div>
+</div>
+</details>
+<details class="group rounded-xl bg-[#1e1e1e] border border-[#333] open:border-primary/50 overflow-hidden transition-all duration-300">
+<summary class="list-none flex flex-col md:flex-row items-start md:items-center justify-between p-6 cursor-pointer hover:bg-[#252525] transition-colors relative z-10 [&amp;::-webkit-details-marker]:hidden">
+<div class="flex flex-col gap-1 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Centralized Auth Service</h4>
+<p class="text-gray-400 text-sm">OIDC provider supporting multi-factor authentication flows.</p>
+</div>
+<div class="flex items-center gap-4 mt-4 md:mt-0 shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">NestJS</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">OAuth2</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">TypeORM</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 transform group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-6 pb-6 pt-2 bg-[#1a1a1a] border-t border-[#333]">
+<div class="grid md:grid-cols-3 gap-8 mt-2">
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Architectural Decisions</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Microservice designed with Hexagonal Architecture to decouple core auth logic from OIDC adapters and database drivers.</p>
+</div>
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Database Model</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Self-referencing Role/Permission tables with recursive queries for granular ACL resolution.</p>
+</div>
+<div class="flex items-start flex-col">
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">System Challenges</h5>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">Token revocation propagation across distributed services.</p>
+<a class="flex items-center gap-2 text-white bg-[#2a2a2a] hover:bg-primary px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-[#333] w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                                View Repository
+                                            </a>
+</div>
+</div>
+</div>
+</details>
+<details class="group rounded-xl bg-[#1e1e1e] border border-[#333] open:border-primary/50 overflow-hidden transition-all duration-300">
+<summary class="list-none flex flex-col md:flex-row items-start md:items-center justify-between p-6 cursor-pointer hover:bg-[#252525] transition-colors relative z-10 [&amp;::-webkit-details-marker]:hidden">
+<div class="flex flex-col gap-1 pr-4">
+<h4 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Infrastructure Health Monitor</h4>
+<p class="text-gray-400 text-sm">Real-time anomaly detection for microservices fleet.</p>
+</div>
+<div class="flex items-center gap-4 mt-4 md:mt-0 shrink-0 w-full md:w-auto justify-between md:justify-end">
+<div class="flex gap-2 flex-wrap">
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">Java</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">Kafka</span>
+<span class="text-xs font-mono text-gray-500 border border-[#333] px-2 py-1 rounded bg-[#111]">TimescaleDB</span>
+</div>
+<span class="material-symbols-outlined text-gray-500 transform group-open:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+</summary>
+<div class="px-6 pb-6 pt-2 bg-[#1a1a1a] border-t border-[#333]">
+<div class="grid md:grid-cols-3 gap-8 mt-2">
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Architectural Decisions</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Event-driven architecture buffering metrics in Kafka before batch-inserting into TimescaleDB to handle write pressure.</p>
+</div>
+<div>
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">Database Model</h5>
+<p class="text-gray-400 text-sm leading-relaxed">Hypertable design with time-partitioning chunks to optimize query speed for recent metrics.</p>
+</div>
+<div class="flex items-start flex-col">
+<h5 class="text-white text-sm font-bold mb-2 uppercase tracking-wide text-xs opacity-70">System Challenges</h5>
+<p class="text-gray-400 text-sm leading-relaxed mb-4">Ingesting 1M+ metric points per second without backpressure.</p>
+<a class="flex items-center gap-2 text-white bg-[#2a2a2a] hover:bg-primary px-4 py-2 rounded-lg text-sm font-bold transition-colors border border-[#333] w-full justify-center" href="#">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                                                View Repository
+                                            </a>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-20 bg-[#151515] border-t border-[#2a2a2a]" id="experience">
+<div class="layout-container flex justify-center">
+<div class="px-4 lg:px-12 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="flex-1">
+<h2 class="text-3xl font-bold text-white mb-8">Professional Journey</h2>
+<div class="bg-[#0d0d0d] border border-[#333] rounded-lg p-6 font-mono text-sm h-full min-h-[400px]">
+<div class="text-gray-500 mb-4 border-b border-[#333] pb-2">tail -f career_log.txt</div>
+<div class="flex flex-col gap-6 relative">
+<div class="absolute left-[7px] top-2 bottom-2 w-[1px] bg-[#333]"></div>
+<div class="flex gap-4 relative">
+<div class="w-4 h-4 rounded-full bg-primary border-4 border-[#0d0d0d] z-10 shrink-0"></div>
+<div>
+<div class="text-primary font-bold">2023 - Present</div>
+<div class="text-white font-bold text-lg">Senior Systems Engineer</div>
+<div class="text-gray-400">TechFlow Systems</div>
+<div class="text-gray-600 mt-1">&gt; Lead architect for distributed payment engine.</div>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="w-4 h-4 rounded-full bg-gray-600 border-4 border-[#0d0d0d] z-10 shrink-0"></div>
+<div>
+<div class="text-gray-400 font-bold">2020 - 2023</div>
+<div class="text-gray-300 font-bold text-lg">Backend Developer</div>
+<div class="text-gray-500">DataSphere Inc.</div>
+<div class="text-gray-600 mt-1">&gt; Scaled Java microservices to 5k RPS.</div>
+</div>
+</div>
+<div class="flex gap-4 relative">
+<div class="w-4 h-4 rounded-full bg-gray-600 border-4 border-[#0d0d0d] z-10 shrink-0"></div>
+<div>
+<div class="text-gray-400 font-bold">2018 - 2020</div>
+<div class="text-gray-300 font-bold text-lg">Junior Software Engineer</div>
+<div class="text-gray-500">CloudStartups LLC</div>
+<div class="text-gray-600 mt-1">&gt; Migrated legacy monolith to Spring Boot.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center gap-8">
+<div class="space-y-6">
+<h3 class="text-xl font-bold text-white">Career Highlights</h3>
+<div class="flex gap-4 items-start">
+<div class="bg-[#2a2a2a] p-3 rounded text-primary shrink-0">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<div>
+<h4 class="text-white font-bold">Scalability Expert</h4>
+<p class="text-gray-400 text-sm mt-1">Successfully scaled systems to handle 10x traffic spikes using horizontal pod autoscaling and DB read replicas.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-[#2a2a2a] p-3 rounded text-primary shrink-0">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<h4 class="text-white font-bold">Team Leadership</h4>
+<p class="text-gray-400 text-sm mt-1">Mentored 5 junior developers in Java best practices and Domain Driven Design.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-[#2a2a2a] p-3 rounded text-primary shrink-0">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<div>
+<h4 class="text-white font-bold">Knowledge Management</h4>
+<p class="text-gray-400 text-sm mt-1">Maintains a rigorous Obsidian-driven knowledge base to structure architectural decision records (ADRs).</p>
+</div>
+</div>
+</div>
+<button class="w-full md:w-fit mt-4 flex items-center justify-center rounded-lg h-12 px-6 bg-[#2a2a2a] hover:bg-[#333] border border-[#333] text-white text-base font-bold transition-colors">
+<span class="material-symbols-outlined mr-2">description</span>
+                                Download Full Resume
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-20 bg-[#111]" id="contact">
+<div class="layout-container flex justify-center">
+<div class="px-4 lg:px-12 flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col max-w-[1440px] flex-1 w-full">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start pb-20">
+<div class="flex flex-col gap-8">
+<div>
+<h2 class="text-3xl md:text-5xl font-black text-white mb-4">Let's Connect</h2>
+<p class="text-gray-400 text-lg">
+                                    Interested in scalable architecture? Fill out the form below or connect via social platforms.
+                                </p>
+</div>
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-gray-400 uppercase tracking-wider">Name</label>
+<input class="w-full bg-[#1e1e1e] border border-[#333] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-gray-400 uppercase tracking-wider">Email</label>
+<input class="w-full bg-[#1e1e1e] border border-[#333] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="jane@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-gray-400 uppercase tracking-wider">Message</label>
+<textarea class="w-full bg-[#1e1e1e] border border-[#333] rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Let's discuss distributed systems..." rows="4"></textarea>
+</div>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-burgundy-glow/80 transition-all text-white text-base font-bold shadow-lg shadow-primary/20 mt-2" type="submit">
+                                    Send Message
+                                </button>
+</form>
+</div>
+<div class="flex flex-col gap-6 lg:pt-24">
+<a class="group flex items-center gap-6 p-6 rounded-xl border border-[#333] bg-[#1e1e1e] hover:border-primary/50 hover:bg-[#252525] transition-all" href="#">
+<div class="w-14 h-14 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-white group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">GitHub</h3>
+<p class="text-gray-400 text-sm">Check out my repositories and contributions.</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 ml-auto group-hover:text-white group-hover:translate-x-1 transition-all">arrow_forward</span>
+</a>
+<a class="group flex items-center gap-6 p-6 rounded-xl border border-[#333] bg-[#1e1e1e] hover:border-primary/50 hover:bg-[#252525] transition-all" href="#">
+<div class="w-14 h-14 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-white group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">work</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">LinkedIn</h3>
+<p class="text-gray-400 text-sm">Let's network and discuss opportunities.</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 ml-auto group-hover:text-white group-hover:translate-x-1 transition-all">arrow_forward</span>
+</a>
+<a class="group flex items-center gap-6 p-6 rounded-xl border border-[#333] bg-[#1e1e1e] hover:border-primary/50 hover:bg-[#252525] transition-all" href="#">
+<div class="w-14 h-14 rounded-lg bg-[#2a2a2a] flex items-center justify-center text-white group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+<div class="flex flex-col">
+<h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Email</h3>
+<p class="text-gray-400 text-sm">Direct contact for inquiries.</p>
+</div>
+<span class="material-symbols-outlined text-gray-600 ml-auto group-hover:text-white group-hover:translate-x-1 transition-all">arrow_forward</span>
+</a>
+</div>
+</div>
+<footer class="mt-20 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-[#222] pt-8">
+<div class="flex items-center gap-2">
+<div class="size-5 flex items-center justify-center bg-primary rounded text-white font-bold font-mono text-xs">
+                                &lt;/&gt;
+                            </div>
+<span class="text-gray-400 font-bold">Agustín</span>
+</div>
+<div class="flex gap-8">
+<a class="text-gray-500 hover:text-white transition-colors" href="#">GitHub</a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#">LinkedIn</a>
+<a class="text-gray-500 hover:text-white transition-colors" href="#">Twitter</a>
+</div>
+<div class="text-gray-600 text-sm">
+                            © 2023 Agustín. All rights reserved.
+                        </div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
