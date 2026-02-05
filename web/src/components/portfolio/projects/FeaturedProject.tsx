@@ -1,11 +1,11 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { ProjectScreenCarousel } from "./ProjectScreenCarousel";
-import { ProjectOverviewPanel } from "./panels/ProjectOverviewPanel";
-import { ArchitecturePanel } from "./panels/ArchitecturePanel";
-import { ConsistencyPanel } from "./panels/ConsistencyPanel";
-import { ApprovalFlowPanel } from "./panels/ApprovalFlowPanel";
+import { ProjectScreenCarousel } from "./featured-project/ProjectScreenCarousel";
+import { ProjectOverviewPanel } from "./featured-project/panels/ProjectOverviewPanel";
+import { ArchitecturePanel } from "./featured-project/panels/ArchitecturePanel";
+import { ConsistencyPanel } from "./featured-project/panels/ConsistencyPanel";
+import { ApprovalFlowPanel } from "./featured-project/panels/ApprovalFlowPanel";
 import { useState } from "react";
 
 export function FeaturedProject() {

@@ -31,19 +31,25 @@ export function Header() {
                                 href="#about-tech"
                                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
                             >
-                                Filosofía y Tech
+                                Sobre Mi
                             </Link>
                             <Link
                                 href="#projects"
                                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
                             >
-                                Ingeniería
+                                Proyectos
                             </Link>
                             <Link
                                 href="#experience"
                                 className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
                             >
                                 Trayectoria
+                            </Link>
+                            <Link
+                                href="#contact"
+                                className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+                            >
+                                Conectemos
                             </Link>
                         </div>
                         <Button className="shadow-[0_0_15px_rgba(161,18,59,0.5)]">

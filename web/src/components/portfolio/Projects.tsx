@@ -1,26 +1,54 @@
 "use client";
 
 import { FeaturedProject } from "./projects/FeaturedProject";
-import { ProjectList } from "./projects/ProjectList";
+import { Project, ProjectAcordionItem } from "./projects/ProjectList";
+import { AuthLeft, AuthRight } from "./projects/project-auth";
+import { Accordion } from "../ui/accordion";
+
+const projects: Project[] = [
+    {
+        id: "auth",
+        title: "Servicio de Autenticación Centralizado",
+        description:
+            "Proveedor OIDC con soporte para flujos de autenticación multifactor.",
+        technologies: ["NestJS", "OAuth2", "TypeORM"],
+        left: <AuthLeft />,
+        right: <AuthRight />,
+    },
+];
 
 export function Projects() {
     return (
         <section id="projects" className="py-20 bg-background">
             <div className="mx-auto max-w-360 w-full px-4 lg:px-12">
                 <div className="flex flex-col gap-8">
-                    {/* Header */}
-                    <div className="flex items-center gap-3">
-                        <span className="w-3 h-3 rounded-full bg-primary animate-pulse shadow-[0_0_8px_#a1123b]" />
-                        <p className="text-primary text-sm font-bold tracking-widest uppercase">
+                    {/* Section Header */}
+                    <div className="flex flex-col gap-6">
+                        <div className="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
+                            <span className="w-2 h-2 rounded-full bg-primary" />
                             En Producción
-                        </p>
+                        </div>
+                        <h2 className="text-4xl md:text-4xl font-black leading-tight">
+                            Proyectos
+                        </h2>
                     </div>
 
                     {/* Featured Project Card */}
                     <FeaturedProject />
 
                     {/* Project Accordions */}
-                    <ProjectList />
+                    <Accordion
+                        type="single"
+                        collapsible
+                        className="flex flex-col gap-4"
+                    >
+                        {projects.map((project) => (
+                            <ProjectAcordionItem
+                                key={project.id}
+                                project={project}
+                            />
+                        ))}
+                    </Accordion>
                 </div>
             </div>
         </section>
