@@ -12,7 +12,13 @@ import {
 import { CodeDisplay } from "./CodeDisplay";
 import { cn } from "@/lib/utils";
 
-export function ProjectScreenCarousel() {
+interface ProjectScreenCarouselProps {
+    onSlideChange?: (index: number) => void;
+}
+
+export function ProjectScreenCarousel({
+    onSlideChange,
+}: ProjectScreenCarouselProps) {
     const [api, setApi] = React.useState<CarouselApi>();
     const [current, setCurrent] = React.useState(0);
     const [count, setCount] = React.useState(0);
@@ -25,32 +31,33 @@ export function ProjectScreenCarousel() {
         setCount(api.scrollSnapList().length);
         setCurrent(api.selectedScrollSnap() + 1);
 
+        // Notify parent of initial state (0-indexed)
+        if (onSlideChange) {
+            onSlideChange(api.selectedScrollSnap());
+        }
+
         api.on("select", () => {
-            setCurrent(api.selectedScrollSnap() + 1);
+            const index = api.selectedScrollSnap();
+            setCurrent(index + 1);
+            if (onSlideChange) {
+                onSlideChange(index);
+            }
         });
-    }, [api]);
+    }, [api, onSlideChange]);
 
     return (
-        <div className="flex-1 bg-[#111] p-8 lg:p-12 flex flex-col items-center justify-center relative overflow-hidden min-h-100">
+        <div className="flex-1 bg-[#111] flex flex-col relative overflow-hidden min-h-125">
             {/* Background Grid */}
             <div className="absolute inset-0 grid-bg opacity-10 pointer-events-none" />
 
             <Carousel
                 setApi={setApi}
-                className="w-full max-w-2xl relative z-10"
+                className="w-full h-full flex-1 relative z-10 flex flex-col"
             >
-                <CarouselContent>
+                <CarouselContent className="h-full">
                     {/* Slide 1: Code Display */}
-                    <CarouselItem>
-                        {/* We remove the wrapper styling from CodeDisplay and let CarouselItem handle it, 
-                             but CodeDisplay has its own wrapper. Let's adjust CodeDisplay later or just use it here.
-                             For now, I'll assume CodeDisplay is self-contained but I might need to strip its outer padding/bg if I want the carousel to control that.
-                             Wait, CodeDisplay has `bg-[#111] p-8` etc. 
-                             To make it clean, I should probably REFACTOR CodeDisplay to be just the "Box" and let the parent handle the background.
-                             For this step, I will just render it and see.
-                         */}
-                        <div className="flex items-center justify-center py-4">
-                            {/* Override CodeDisplay to fit nicely if needed */}
+                    <CarouselItem className="h-full">
+                        <div className="flex items-center justify-center h-full w-full p-8 lg:p-12">
                             <div className="w-full">
                                 <CodeDisplay embedded={true} />
                             </div>
@@ -58,8 +65,8 @@ export function ProjectScreenCarousel() {
                     </CarouselItem>
 
                     {/* Slide 2: Placeholder */}
-                    <CarouselItem>
-                        <div className="flex items-center justify-center py-4 h-full">
+                    <CarouselItem className="h-full">
+                        <div className="flex items-center justify-center h-full w-full p-8 lg:p-12">
                             <div className="w-full h-75 rounded-lg bg-[#0d0d0d] border border-border flex items-center justify-center text-muted-foreground font-mono text-sm shadow-2xl">
                                 [Próximamente: Diagrama de Arquitectura]
                             </div>
@@ -68,8 +75,8 @@ export function ProjectScreenCarousel() {
                 </CarouselContent>
 
                 {/* Navigation Buttons */}
-                <CarouselPrevious className="-left-5 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm" />
-                <CarouselNext className="-right-5 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm" />
+                <CarouselPrevious className="left-4 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm absolute top-1/2 -translate-y-1/2" />
+                <CarouselNext className="right-4 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm absolute top-1/2 -translate-y-1/2" />
             </Carousel>
 
             {/* Dots Indicator */}
