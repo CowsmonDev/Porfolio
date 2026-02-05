@@ -1,9 +1,9 @@
 "use client";
 
-import { FeaturedProject } from "./projects/FeaturedProject";
-import { Project, ProjectAcordionItem } from "./projects/ProjectList";
-import { AuthLeft, AuthRight } from "./projects/project-auth";
-import { Accordion } from "../ui/accordion";
+import { FeaturedProject } from "./FeaturedProject";
+import { Project, ProjectAcordionItem } from "./ProjectAcordionItem";
+import { AuthLeft, AuthRight } from "./project-auth";
+import { Accordion } from "../../ui/accordion";
 
 const projects: Project[] = [
     {
