@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { CheckCircle, ExternalLink, Github } from "lucide-react";
-import { CodeDisplay } from "./CodeDisplay";
+import { ProjectScreenCarousel } from "./ProjectScreenCarousel";
 
 export function FeaturedProject() {
     return (
@@ -63,8 +63,8 @@ export function FeaturedProject() {
                     </CardContent>
                 </div>
 
-                {/* JSON Code Block Component */}
-                <CodeDisplay />
+                {/* Carousel Component */}
+                <ProjectScreenCarousel />
             </div>
         </Card>
     );
