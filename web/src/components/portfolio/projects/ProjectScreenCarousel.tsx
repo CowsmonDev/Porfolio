@@ -9,7 +9,12 @@ import {
     CarouselPrevious,
     type CarouselApi,
 } from "@/components/ui/carousel";
-import { CodeDisplay } from "./CodeDisplay";
+import {
+    OverviewSlide,
+    ArchitectureSlide,
+    ConsistencySlide,
+    ApprovalSlide,
+} from "./panels/slides";
 import { cn } from "@/lib/utils";
 
 interface ProjectScreenCarouselProps {
@@ -49,19 +54,31 @@ export function ProjectScreenCarousel({
         <div className="absolute inset-0">
             <Carousel setApi={setApi} className="h-full w-full">
                 <CarouselContent className="h-full ml-0">
-                    {/* Slide 1: Code Display */}
+                    {/* Slide 1: Overview - Conflict JSON */}
                     <CarouselItem className="h-full w-full pl-0">
                         <div className="flex items-center justify-center h-full w-full p-8">
-                            <CodeDisplay embedded={true} />
+                            <OverviewSlide />
                         </div>
                     </CarouselItem>
 
-                    {/* Slide 2: Placeholder */}
+                    {/* Slide 2: Architecture Diagram */}
                     <CarouselItem className="h-full w-full pl-0">
                         <div className="flex items-center justify-center h-full w-full p-8">
-                            <div className="w-full h-full rounded-lg bg-[#0d0d0d] border border-border flex items-center justify-center text-muted-foreground font-mono text-sm shadow-2xl">
-                                [Próximamente: Diagrama de Arquitectura]
-                            </div>
+                            <ArchitectureSlide />
+                        </div>
+                    </CarouselItem>
+
+                    {/* Slide 3: Consistency - Saga Pattern */}
+                    <CarouselItem className="h-full w-full pl-0">
+                        <div className="flex items-center justify-center h-full w-full p-8">
+                            <ConsistencySlide />
+                        </div>
+                    </CarouselItem>
+
+                    {/* Slide 4: Approval - CASL Policy */}
+                    <CarouselItem className="h-full w-full pl-0">
+                        <div className="flex items-center justify-center h-full w-full p-8">
+                            <ApprovalSlide />
                         </div>
                     </CarouselItem>
                 </CarouselContent>

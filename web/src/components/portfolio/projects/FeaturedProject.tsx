@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { ProjectScreenCarousel } from "./ProjectScreenCarousel";
 import { ProjectOverviewPanel } from "./panels/ProjectOverviewPanel";
 import { ArchitecturePanel } from "./panels/ArchitecturePanel";
+import { ConsistencyPanel } from "./panels/ConsistencyPanel";
+import { ApprovalFlowPanel } from "./panels/ApprovalFlowPanel";
 import { useState } from "react";
 
 export function FeaturedProject() {
@@ -12,6 +14,8 @@ export function FeaturedProject() {
     const panels = [
         <ProjectOverviewPanel key="overview" />,
         <ArchitecturePanel key="architecture" />,
+        <ConsistencyPanel key="consistency" />,
+        <ApprovalFlowPanel key="approval" />,
     ];
 
     return (

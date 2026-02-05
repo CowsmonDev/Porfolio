@@ -20,23 +20,10 @@ const jsonCode = `{
   ]
 }`;
 
-interface CodeDisplayProps {
-    embedded?: boolean;
-}
-
-export function CodeDisplay({ embedded = false }: CodeDisplayProps) {
+export function OverviewSlide() {
     return (
-        <div
-            className={
-                embedded
-                    ? "w-full"
-                    : "flex-1 bg-[#111] p-8 lg:p-12 flex items-center justify-center relative overflow-hidden"
-            }
-        >
-            {!embedded && (
-                <div className="absolute inset-0 grid-bg opacity-10" />
-            )}
-            <div className="w-full max-w-2xl rounded-lg bg-[#0d0d0d] border border-border font-mono text-sm shadow-2xl z-10 overflow-hidden mx-auto">
+        <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full max-w-2xl rounded-lg bg-[#0d0d0d] border border-border font-mono text-sm shadow-2xl overflow-hidden">
                 <div className="flex items-center justify-between px-4 py-2 bg-card border-b border-border">
                     <span className="text-xs text-green-500 font-bold">
                         POST /rentals/intents/check-conflict

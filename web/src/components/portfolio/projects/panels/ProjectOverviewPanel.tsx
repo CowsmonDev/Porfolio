@@ -15,12 +15,12 @@ export function ProjectOverviewPanel() {
         <div className="flex flex-col justify-center h-full gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <CardHeader className="p-0">
                 <CardTitle className="text-3xl text-foreground">
-                    Ecosistema Distribuido de Alquileres
+                    Gestion de Alquileres Distribuidos.
                 </CardTitle>
                 <CardDescription className="text-base leading-relaxed mt-4">
-                    Plataforma de microservicios diseñada con NestJS. Implementa
-                    persistencia políglota (MongoDB + PostgreSQL) para separar
-                    la identidad flexible de la rigurosidad financiera.
+                    Plataforma para administración de propiedades con
+                    microservicios diseñada con NestJS. Combina MongoDB para
+                    flexibilidad y PostgreSQL para integridad financiera.
                 </CardDescription>
             </CardHeader>
             <CardContent className="p-0 flex flex-col gap-4">
@@ -28,13 +28,13 @@ export function ProjectOverviewPanel() {
                     <div className="flex items-center gap-3 text-muted-foreground">
                         <CheckCircle className="w-4 h-4 text-primary" />
                         <span className="text-sm">
-                            Persistencia Políglota (Mongo & Postgres)
+                            Bases de datos múltiples (MongoDB + PostgreSQL)
                         </span>
                     </div>
                     <div className="flex items-center gap-3 text-muted-foreground">
                         <CheckCircle className="w-4 h-4 text-primary" />
                         <span className="text-sm">
-                            Esquemas Polimórficos Dinámicos
+                            Autenticación JWT y control de acceso
                         </span>
                     </div>
                     <div className="flex items-center gap-3 text-muted-foreground">
