@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
     return (
@@ -9,12 +9,17 @@ export function Footer() {
             <div className="mx-auto max-w-360 w-full px-4 lg:px-12 py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     {/* Logo */}
-                    <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 flex items-center justify-center bg-primary rounded text-white font-bold font-mono text-xs">
-                            &lt;/&gt;
+                    <div className="flex items-center gap-4">
+                        <div className="relative h-8 w-8 overflow-hidden rounded-md">
+                            <Image
+                                src="/Logo2reducidoreducido.png"
+                                alt="Logo"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
-                        <span className="text-muted-foreground font-bold">
-                            Agustín
+                        <span className="text-lg font-bold tracking-tight">
+                            CowsmonDev
                         </span>
                     </div>
 
@@ -22,7 +27,7 @@ export function Footer() {
                     <div className="flex gap-2">
                         <Button variant="ghost" size="icon" asChild>
                             <Link
-                                href="https://github.com/your-username"
+                                href="https://github.com/CowsmonDev"
                                 target="_blank"
                             >
                                 <Github className="w-5 h-5" />
@@ -31,7 +36,7 @@ export function Footer() {
                         </Button>
                         <Button variant="ghost" size="icon" asChild>
                             <Link
-                                href="https://linkedin.com/in/your-username"
+                                href="https://linkedin.com/in/agustin-crespo-dev"
                                 target="_blank"
                             >
                                 <Linkedin className="w-5 h-5" />
@@ -39,12 +44,9 @@ export function Footer() {
                             </Link>
                         </Button>
                         <Button variant="ghost" size="icon" asChild>
-                            <Link
-                                href="https://twitter.com/your-username"
-                                target="_blank"
-                            >
-                                <Twitter className="w-5 h-5" />
-                                <span className="sr-only">Twitter</span>
+                            <Link href="mailto:agustin.crespo22@gmail.com">
+                                <Mail className="w-5 h-5" />
+                                <span className="sr-only">Email</span>
                             </Link>
                         </Button>
                     </div>
