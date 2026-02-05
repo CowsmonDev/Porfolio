@@ -46,55 +46,46 @@ export function ProjectScreenCarousel({
     }, [api, onSlideChange]);
 
     return (
-        <div className="flex-1 bg-[#111] flex flex-col relative overflow-hidden min-h-125">
-            {/* Background Grid */}
-            <div className="absolute inset-0 grid-bg opacity-10 pointer-events-none" />
-
-            <Carousel
-                setApi={setApi}
-                className="w-full h-full flex-1 relative z-10 flex flex-col"
-            >
-                <CarouselContent className="h-full">
+        <div className="absolute inset-0">
+            <Carousel setApi={setApi} className="h-full w-full">
+                <CarouselContent className="h-full ml-0">
                     {/* Slide 1: Code Display */}
-                    <CarouselItem className="h-full">
-                        <div className="flex items-center justify-center h-full w-full p-8 lg:p-12">
-                            <div className="w-full">
-                                <CodeDisplay embedded={true} />
-                            </div>
+                    <CarouselItem className="h-full w-full pl-0">
+                        <div className="flex items-center justify-center h-full w-full p-8">
+                            <CodeDisplay embedded={true} />
                         </div>
                     </CarouselItem>
 
                     {/* Slide 2: Placeholder */}
-                    <CarouselItem className="h-full">
-                        <div className="flex items-center justify-center h-full w-full p-8 lg:p-12">
-                            <div className="w-full h-75 rounded-lg bg-[#0d0d0d] border border-border flex items-center justify-center text-muted-foreground font-mono text-sm shadow-2xl">
+                    <CarouselItem className="h-full w-full pl-0">
+                        <div className="flex items-center justify-center h-full w-full p-8">
+                            <div className="w-full h-full rounded-lg bg-[#0d0d0d] border border-border flex items-center justify-center text-muted-foreground font-mono text-sm shadow-2xl">
                                 [Próximamente: Diagrama de Arquitectura]
                             </div>
                         </div>
                     </CarouselItem>
                 </CarouselContent>
 
-                {/* Navigation Buttons */}
-                <CarouselPrevious className="left-4 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm absolute top-1/2 -translate-y-1/2" />
-                <CarouselNext className="right-4 bg-background/50 hover:bg-primary hover:text-primary-foreground border-border backdrop-blur-sm absolute top-1/2 -translate-y-1/2" />
-            </Carousel>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
 
-            {/* Dots Indicator */}
-            <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
-                {Array.from({ length: count }).map((_, index) => (
-                    <button
-                        key={index}
-                        className={cn(
-                            "w-2 h-2 rounded-full transition-all duration-300",
-                            current === index + 1
-                                ? "bg-primary w-6" // Active dot is wider
-                                : "bg-muted-foreground/30 hover:bg-muted-foreground/50",
-                        )}
-                        onClick={() => api?.scrollTo(index)}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+                {/* Dots Indicator */}
+                <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 z-20">
+                    {Array.from({ length: count }).map((_, index) => (
+                        <button
+                            key={index}
+                            className={cn(
+                                "w-2 h-2 rounded-full transition-all duration-300",
+                                current === index + 1
+                                    ? "bg-primary w-6"
+                                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50",
+                            )}
+                            onClick={() => api?.scrollTo(index)}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            </Carousel>
         </div>
     );
 }
