@@ -1,32 +1,32 @@
+"use client";
 import { Button } from "@/components/ui/button";
-import { Layers, Mail } from "lucide-react";
+import { User, Mail } from "lucide-react";
 
-interface HeroActionsProps {
-    onViewArchitecture?: () => void;
-    onContact?: () => void;
-}
+export function HeroActions() {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
 
-export function HeroActions({
-    onViewArchitecture,
-    onContact,
-}: HeroActionsProps) {
     return (
         <div className="flex flex-wrap gap-4">
             <Button
                 size="lg"
                 className="h-12 px-6 shadow-[0_4px_14px_0_rgba(161,18,59,0.39)]"
-                onClick={onViewArchitecture}
+                onClick={() => scrollToSection("about-tech")}
             >
-                <Layers className="w-4 h-4" />
-                Ver Arquitectura
+                <User className="w-4 h-4 mr-2" />
+                Sobre Mí
             </Button>
             <Button
                 variant="outline"
                 size="lg"
                 className="h-12 px-6"
-                onClick={onContact}
+                onClick={() => scrollToSection("contact")}
             >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 mr-2" />
                 Contactar
             </Button>
         </div>

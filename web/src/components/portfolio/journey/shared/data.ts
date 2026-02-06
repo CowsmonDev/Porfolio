@@ -7,7 +7,7 @@ export const experiences: Experience[] = [
         title: "Desarrollador Full Stack & Scrum Master",
         organization: "Proyecto Agente IA para RRHH – UNICEN",
         description:
-            "Participación en un tren de soluciones de 40 integrantes. Lideré la agilidad como Scrum Master y posteriormente desarrollé el agente inteligente (FastAPI + LangChain) y la visualización de métricas mediante grafos dinámicos (G6) en el frontend.",
+            "Participación en un tren de soluciones de 40 integrantes Aplicando la Metodologia SAFe. Lideré la agilidad como Scrum Master y posteriormente colabore en el desarrollo del agente inteligente (FastAPI + LangChain) y la visualización de métricas mediante grafos dinámicos (G6) en el frontend.",
         isCurrent: true,
     },
     {

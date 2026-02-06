@@ -119,12 +119,6 @@ export function TechStack() {
                                     <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Hibernate/JPA
                                     </span>
-                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
-                                        Redis
-                                    </span>
-                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
-                                        TPT Inheritance
-                                    </span>
                                 </div>
                             </div>
 
@@ -146,9 +140,6 @@ export function TechStack() {
                                     </span>
                                     <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Docker
-                                    </span>
-                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
-                                        Kubernetes
                                     </span>
                                 </div>
                             </div>

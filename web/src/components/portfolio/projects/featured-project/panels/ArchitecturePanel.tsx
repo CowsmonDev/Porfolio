@@ -54,13 +54,6 @@ export function ArchitecturePanel() {
                         </span>
                     </div>
                 </div>
-                <Separator className="my-2" />
-                <div className="flex gap-3">
-                    <Button size="lg" className="w-full sm:w-auto">
-                        Explorar Diagrama
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                </div>
             </CardContent>
         </div>
     );

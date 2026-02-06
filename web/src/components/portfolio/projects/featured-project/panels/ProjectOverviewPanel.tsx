@@ -46,17 +46,18 @@ export function ProjectOverviewPanel() {
                 </div>
                 <Separator className="my-2" />
                 <div className="flex gap-3">
-                    <Button size="lg" className="w-full sm:w-auto">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Ver Arquitectura
-                    </Button>
                     <Button
-                        variant="secondary"
                         size="lg"
                         className="w-full sm:w-auto"
+                        onClick={() =>
+                            window.open(
+                                "https://github.com/CowsmonDev/ApiAlquileres/tree/DevOps",
+                                "_blank",
+                            )
+                        }
                     >
                         <Github className="w-4 h-4 mr-2" />
-                        Código Fuente
+                        Ver Repositorio
                     </Button>
                 </div>
             </CardContent>

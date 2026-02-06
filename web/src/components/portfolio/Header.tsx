@@ -53,9 +53,17 @@ export function Header() {
                                 Conectemos
                             </Link>
                         </div>
-                        <Button className="shadow-[0_0_15px_rgba(161,18,59,0.5)]">
-                            <Download className="w-4 h-4" />
-                            Curriculum
+                        <Button
+                            className="shadow-[0_0_15px_rgba(161,18,59,0.5)]"
+                            asChild
+                        >
+                            <a
+                                href="/CV_Agustin_Crespo.pdf"
+                                download="CV_Agustin_Crespo.pdf"
+                            >
+                                <Download className="w-4 h-4" />
+                                Curriculum
+                            </a>
                         </Button>
                         <ModeToggle />
                     </nav>
