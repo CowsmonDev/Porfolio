@@ -15,7 +15,7 @@ export function Highlights() {
                                 {h.icon}
                             </div>
                             <div>
-                                <h4 className="font-semibold text-white text-sm">
+                                <h4 className="font-semibold text-foreground text-sm">
                                     {h.title}
                                 </h4>
                                 <p className="text-muted-foreground text-xs mt-1 leading-relaxed">

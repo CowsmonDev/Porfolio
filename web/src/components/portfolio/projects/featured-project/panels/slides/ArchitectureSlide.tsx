@@ -5,7 +5,7 @@ import { Building2, Database, Server, Users } from "lucide-react";
 export function ArchitectureSlide() {
     return (
         <div className="w-full h-full flex items-center justify-center">
-            <div className="w-full max-w-2xl rounded-lg bg-[#0d0d0d] border border-border shadow-2xl overflow-hidden">
+            <div className="w-full max-w-2xl rounded-lg bg-code-bg border border-border shadow-2xl overflow-hidden">
                 <div className="flex items-center justify-between px-4 py-2 bg-card border-b border-border">
                     <span className="text-xs text-blue-500 font-bold font-mono">
                         Arquitectura de Microservicios

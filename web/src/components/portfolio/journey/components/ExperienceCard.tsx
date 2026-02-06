@@ -41,7 +41,7 @@ export function ExperienceCard({
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-base font-bold text-white mb-1">
+                        <h3 className="text-base font-bold text-foreground mb-1">
                             {title}
                         </h3>
                         <p className="text-sm text-muted-foreground">
