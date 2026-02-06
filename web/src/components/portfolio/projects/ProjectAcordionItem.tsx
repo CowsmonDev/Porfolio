@@ -23,7 +23,7 @@ export function ProjectAcordionItem({ project }: { project: Project }) {
         <AccordionItem
             key={project.id}
             value={project.id}
-            className="rounded-xl bg-card border border-border overflow-hidden data-[state=open]:border-primary/50 transition-colors"
+            className="rounded-xl bg-card border border-border overflow-hidden data-[state=open]:border-primary/50 transition-colors last:border-b"
         >
             <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-secondary data-[state=open]:bg-secondary">
                 <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full pr-4">
