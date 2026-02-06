@@ -12,7 +12,7 @@ export function Journey() {
     return (
         <section
             id="experience"
-            className="py-20 bg-[#151515] border-t border-border"
+            className="py-20 bg-secondary dark:bg-[#151515] border-t border-border"
         >
             <div className="mx-auto max-w-360 w-full px-4 lg:px-12">
                 {/* Section header */}
