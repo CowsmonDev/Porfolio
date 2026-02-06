@@ -39,11 +39,11 @@ export function SocialLinks() {
                     rel="noopener noreferrer"
                     className="group flex items-center gap-6 p-6 rounded-xl border border-border bg-card hover:border-primary/50 hover:bg-secondary transition-all"
                 >
-                    <div className="w-14 h-14 rounded-lg bg-secondary flex items-center justify-center text-white group-hover:text-primary transition-colors">
+                    <div className="w-14 h-14 rounded-lg bg-secondary flex items-center justify-center text-foreground group-hover:text-primary transition-colors">
                         <social.icon className="w-6 h-6" />
                     </div>
                     <div className="flex flex-col flex-1">
-                        <span className="text-xl font-bold text-white group-hover:text-primary transition-colors">
+                        <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                             {social.name}
                         </span>
                         <span className="text-muted-foreground text-sm">

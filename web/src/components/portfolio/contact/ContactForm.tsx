@@ -57,6 +57,7 @@ export function ContactForm() {
                         placeholder="Juan Pérez"
                         required
                         disabled={status === "loading"}
+                        className="bg-white dark:bg-background"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -68,6 +69,7 @@ export function ContactForm() {
                         placeholder="juan@ejemplo.com"
                         required
                         disabled={status === "loading"}
+                        className="bg-white dark:bg-background"
                     />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -79,6 +81,7 @@ export function ContactForm() {
                         placeholder="Hablemos de sistemas distribuidos..."
                         required
                         disabled={status === "loading"}
+                        className="bg-white dark:bg-background"
                     />
                 </div>
 
