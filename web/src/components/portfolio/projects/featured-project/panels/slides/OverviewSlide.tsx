@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
     vscDarkPlus,
@@ -26,7 +27,15 @@ const jsonCode = `{
 
 export function OverviewSlide() {
     const { resolvedTheme } = useTheme();
-    const codeStyle = resolvedTheme === "dark" ? vscDarkPlus : oneLight;
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const codeStyle =
+        mounted && resolvedTheme === "light" ? oneLight : vscDarkPlus;
 
     return (
         <div className="w-full h-full flex items-center justify-center">

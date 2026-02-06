@@ -6,6 +6,7 @@ import {
     oneLight,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
 const caslCode = `// ms-properties: CASL para acceso al catálogo
@@ -27,7 +28,14 @@ export class PropertyAbilityFactory {
 
 export function ApprovalSlide() {
     const { resolvedTheme } = useTheme();
-    const codeStyle = resolvedTheme === "dark" ? vscDarkPlus : oneLight;
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const codeStyle =
+        mounted && resolvedTheme === "light" ? oneLight : vscDarkPlus;
 
     return (
         <div className="w-full h-full flex items-center justify-center">

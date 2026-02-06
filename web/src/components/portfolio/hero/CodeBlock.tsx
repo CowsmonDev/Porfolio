@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import {
     vscDarkPlus,
@@ -42,7 +43,15 @@ export function CodeBlock({
     statusMessage = "Compilado Exitosamente (tsc)",
 }: CodeBlockProps) {
     const { resolvedTheme } = useTheme();
-    const codeStyle = resolvedTheme === "dark" ? vscDarkPlus : oneLight;
+
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const codeStyle =
+        mounted && resolvedTheme === "light" ? oneLight : vscDarkPlus;
 
     return (
         <div className="w-full lg:w-150 xl:w-175 flex justify-center lg:justify-end">
