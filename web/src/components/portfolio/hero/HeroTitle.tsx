@@ -7,7 +7,7 @@ interface HeroTitleProps {
 export function HeroTitle({ title, highlight, subtitle }: HeroTitleProps) {
     return (
         <div className="flex flex-col gap-6">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-white">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-foreground">
                 {title}{" "}
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-rose-500">
                     {highlight}

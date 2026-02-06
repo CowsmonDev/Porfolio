@@ -5,17 +5,7 @@ import { Project, ProjectAcordionItem } from "./ProjectAcordionItem";
 import { AuthLeft, AuthRight } from "./project-auth";
 import { Accordion } from "../../ui/accordion";
 
-const projects: Project[] = [
-    {
-        id: "auth",
-        title: "Servicio de Autenticación Centralizado",
-        description:
-            "Proveedor OIDC con soporte para flujos de autenticación multifactor.",
-        technologies: ["NestJS", "OAuth2", "TypeORM"],
-        left: <AuthLeft />,
-        right: <AuthRight />,
-    },
-];
+const projects: Project[] = [];
 
 export function Projects() {
     return (

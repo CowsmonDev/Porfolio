@@ -27,7 +27,7 @@ export function DetailPanel({ experience, onClose }: DetailPanelProps) {
                 </div>
 
                 {/* Experience details */}
-                <h3 className="text-lg font-bold text-white mb-1">
+                <h3 className="text-lg font-bold text-foreground mb-1">
                     {experience.title}
                 </h3>
                 <p className="text-sm text-primary mb-4">

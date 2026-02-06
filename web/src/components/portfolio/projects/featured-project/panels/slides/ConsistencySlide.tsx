@@ -1,7 +1,11 @@
 "use client";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+    vscDarkPlus,
+    oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useTheme } from "next-themes";
 import { Badge } from "@/components/ui/badge";
 
 const sagaCode = `// Sincronización REST entre servicios
@@ -28,9 +32,12 @@ async confirmReservation(dto: ConfirmDto) {
 }`;
 
 export function ConsistencySlide() {
+    const { resolvedTheme } = useTheme();
+    const codeStyle = resolvedTheme === "dark" ? vscDarkPlus : oneLight;
+
     return (
         <div className="w-full h-full flex items-center justify-center">
-            <div className="w-full max-w-2xl rounded-lg bg-[#0d0d0d] border border-border font-mono text-sm shadow-2xl overflow-hidden">
+            <div className="w-full max-w-2xl rounded-lg bg-code-bg border border-border font-mono text-sm shadow-2xl overflow-hidden">
                 <div className="flex items-center justify-between px-4 py-2 bg-card border-b border-border">
                     <span className="text-xs text-cyan-500 font-bold">
                         reservations.service.ts
@@ -45,7 +52,7 @@ export function ConsistencySlide() {
                 <div className="p-4 overflow-x-auto">
                     <SyntaxHighlighter
                         language="typescript"
-                        style={vscDarkPlus}
+                        style={codeStyle}
                         customStyle={{
                             margin: 0,
                             padding: 0,

@@ -27,7 +27,7 @@ export function FeaturedProject() {
                 </div>
 
                 {/* Right Panel - Carousel Container */}
-                <div className="lg:w-1/2 min-h-full bg-[#111] relative">
+                <div className="lg:w-1/2 min-h-full bg-section-dark relative">
                     <ProjectScreenCarousel onSlideChange={setCurrentIndex} />
                 </div>
             </div>

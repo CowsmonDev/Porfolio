@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Download, Menu } from "lucide-react";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export function Header() {
     return (
@@ -56,12 +57,16 @@ export function Header() {
                             <Download className="w-4 h-4" />
                             Curriculum
                         </Button>
+                        <ModeToggle />
                     </nav>
-                    {/* Mobile Menu Button */}
-                    <Button variant="ghost" size="icon" className="md:hidden">
-                        <Menu className="h-6 w-6" />
-                        <span className="sr-only">Toggle menu</span>
-                    </Button>
+                    {/* Mobile Menu */}
+                    <div className="flex md:hidden items-center gap-1">
+                        <ModeToggle />
+                        <Button variant="ghost" size="icon">
+                            <Menu className="h-6 w-6" />
+                            <span className="sr-only">Toggle menu</span>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </header>

@@ -1,7 +1,11 @@
 "use client";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+    vscDarkPlus,
+    oneLight,
+} from "react-syntax-highlighter/dist/esm/styles/prism";
+import { useTheme } from "next-themes";
 
 // Código TypeScript como string simple - fácil de leer y modificar
 const codigoFuente = `// Definición del perfil profesional
@@ -37,9 +41,12 @@ export function CodeBlock({
     filename = "Ingeniero.ts",
     statusMessage = "Compilado Exitosamente (tsc)",
 }: CodeBlockProps) {
+    const { resolvedTheme } = useTheme();
+    const codeStyle = resolvedTheme === "dark" ? vscDarkPlus : oneLight;
+
     return (
         <div className="w-full lg:w-150 xl:w-175 flex justify-center lg:justify-end">
-            <div className="w-full rounded-lg overflow-hidden bg-[#0d0d0d] border border-border shadow-2xl font-mono text-sm animate-neon-pulse">
+            <div className="w-full rounded-lg overflow-hidden bg-code-bg border border-border shadow-2xl font-mono text-sm animate-neon-pulse">
                 {/* Barra de Ventana */}
                 <div className="flex items-center justify-between px-4 py-2 bg-card border-b border-border">
                     <div className="flex gap-2">
@@ -57,7 +64,7 @@ export function CodeBlock({
                 <div className="overflow-x-auto p-6">
                     <SyntaxHighlighter
                         language="typescript"
-                        style={vscDarkPlus}
+                        style={codeStyle}
                         customStyle={{
                             margin: 0,
                             padding: 0,
@@ -77,7 +84,7 @@ export function CodeBlock({
                 </div>
 
                 {/* Barra de Estado */}
-                <div className="border-t border-border p-2 bg-[#111] text-xs flex items-center gap-2">
+                <div className="border-t border-border p-2 bg-section-dark text-xs flex items-center gap-2">
                     <span className="text-green-500">✓</span>
                     <span className="text-green-500">{statusMessage}</span>
                     <span className="text-muted-foreground ml-auto">0s</span>

@@ -6,7 +6,7 @@ export function TechStack() {
         >
             {/* Background Icon */}
             <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.02] pointer-events-none overflow-hidden flex items-center justify-end">
-                <span className="text-[600px] text-white -mr-40 rotate-12">
+                <span className="text-[600px] text-foreground -mr-40 rotate-12">
                     ⬡
                 </span>
             </div>
@@ -28,13 +28,13 @@ export function TechStack() {
                             <div className="text-muted-foreground text-lg leading-relaxed space-y-6">
                                 <p>
                                     Mi camino en la programación comenzó en{" "}
-                                    <strong className="text-white">
+                                    <strong className="text-foreground">
                                         4° año de secundaria (2016)
                                     </strong>
                                     , donde descubrí la lógica computacional y
                                     empecé a resolver problemas con código. Esa
                                     curiosidad me llevó a estudiar{" "}
-                                    <strong className="text-white">
+                                    <strong className="text-foreground">
                                         Ingeniería en Sistemas
                                     </strong>{" "}
                                     en la universidad, donde profundicé en
@@ -44,7 +44,7 @@ export function TechStack() {
                                 <p>
                                     Pero el aprendizaje no terminó en las aulas.
                                     De forma{" "}
-                                    <strong className="text-white">
+                                    <strong className="text-foreground">
                                         autodidacta
                                     </strong>
                                     , mis conocimientos previos me permitieron
@@ -52,7 +52,7 @@ export function TechStack() {
                                     patrones de diseño, arquitecturas
                                     escalables, y las mejores prácticas de la
                                     industria. Esta combinación de{" "}
-                                    <strong className="text-white">
+                                    <strong className="text-foreground">
                                         educación formal y exploración
                                         independiente
                                     </strong>{" "}
@@ -82,13 +82,13 @@ export function TechStack() {
                                 </p>
                                 <div className="h-px w-full bg-border my-2" />
                                 <div className="flex flex-wrap gap-3">
-                                    <span className="px-3 py-1 bg-secondary text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
+                                    <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
                                         Java 17+
                                     </span>
-                                    <span className="px-3 py-1 bg-secondary text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
+                                    <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
                                         Spring Boot
                                     </span>
-                                    <span className="px-3 py-1 bg-secondary text-white text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
+                                    <span className="px-3 py-1 bg-secondary text-secondary-foreground text-sm font-mono rounded border border-primary/30 shadow-[0_0_10px_rgba(161,18,59,0.1)]">
                                         NestJS
                                     </span>
                                     <span className="px-3 py-1 bg-secondary text-muted-foreground text-sm font-mono rounded border border-border">
@@ -113,16 +113,16 @@ export function TechStack() {
                                     </h3>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         PostgreSQL
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Hibernate/JPA
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Redis
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         TPT Inheritance
                                     </span>
                                 </div>
@@ -138,16 +138,16 @@ export function TechStack() {
                                     </h3>
                                 </div>
                                 <div className="flex flex-wrap gap-2">
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Vim (Neovim)
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Obsidian
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Docker
                                     </span>
-                                    <span className="px-2 py-1 bg-[#151515] text-muted-foreground text-xs font-mono rounded border border-secondary">
+                                    <span className="px-2 py-1 bg-secondary text-muted-foreground text-xs font-mono rounded border border-secondary">
                                         Kubernetes
                                     </span>
                                 </div>
