@@ -17,6 +17,8 @@
     --color-burgundy-glow: #9f1239;
     --color-concrete-dark: #222222;
     --color-concrete-light: #2a2a2a;
+    --color-code-bg: var(--code-bg);
+    --color-section-dark: var(--section-dark);
 
     /* shadcn variables */
     --color-sidebar-ring: var(--sidebar-ring);
@@ -73,8 +75,8 @@
     --accent: #f4f4f5;
     --accent-foreground: #1a1a1a;
     --destructive: #ef4444;
-    --border: #e4e4e7;
-    --input: #e4e4e7;
+    --border: #a1a1aa;
+    --input: #a1a1aa;
     --ring: #a1123b;
     --chart-1: #a1123b;
     --chart-2: #22c55e;
@@ -89,6 +91,8 @@
     --sidebar-accent-foreground: #1a1a1a;
     --sidebar-border: #e4e4e7;
     --sidebar-ring: #a1123b;
+    --code-bg: #f4f4f5;
+    --section-dark: #e4e4e7;
 }
 
 /* Dark mode */
@@ -119,6 +123,8 @@
     --sidebar-accent-foreground: #ffffff;
     --sidebar-border: #333333;
     --sidebar-ring: #a1123b;
+    --code-bg: #0d0d0d;
+    --section-dark: #111111;
 }
 
 @layer base {
