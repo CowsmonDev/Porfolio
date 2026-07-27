@@ -9,29 +9,32 @@ import {
 import { useTheme } from "next-themes";
 
 // Código TypeScript como string simple - fácil de leer y modificar
-const codigoFuente = `// Definición del perfil profesional
-class Ingeniero {
+const codigoFuente = `// Perfil profesional
+class FullStackDev {
     public nombre: string;
-    public apellido: string;
-    public enfoques: string[];
+    public capas: string[];
     public stack: string[];
 
     constructor() {
-        this.nombre = 'Agustín';
-        this.apellido = 'Crespo';
-        this.enfoques = [
-            'Sistemas Distribuidos',
-            'Arquitectura de Software'
+        this.nombre = 'Agustín Crespo';
+        this.capas = [
+            'Backend & arquitectura',
+            'Frontend & producto',
+            'Agentes de IA'
         ];
         this.stack = [
             'Java/Spring Boot',
             'NestJS',
-            'PostgreSQL'
+            'Next.js',
+            'PostgreSQL',
+            'LangChain'
         ];
     }
-}
 
-const agustin = new Ingeniero();`;
+    construir(idea: string): Producto {
+        return new Producto(idea, this.stack);
+    }
+}`;
 
 interface CodeBlockProps {
     filename?: string;
@@ -39,7 +42,7 @@ interface CodeBlockProps {
 }
 
 export function CodeBlock({
-    filename = "Ingeniero.ts",
+    filename = "FullStack.ts",
     statusMessage = "Compilado Exitosamente (tsc)",
 }: CodeBlockProps) {
     const { resolvedTheme } = useTheme();
