@@ -48,6 +48,8 @@ Each portfolio section lives in its own folder under `src/components/portfolio/<
 
 When adding a new section or sub-section, follow this same folder shape rather than flattening files into one directory.
 
+**Caveat:** this codebase was originally generated in February 2026 with an early AI coding agent (Antigravity), during the initial wave of AI-assisted scaffolding tools. Treat the existing folder/component structure as a starting convention to stay consistent with, not as a proven or deliberately-designed pattern — it may contain unnecessary nesting or indirection that nobody chose on purpose. Don't propagate an existing structure into new code purely because "that's what the codebase already does." Match it when it's genuinely reasonable for the size of the section; simplify (e.g. skip a `components/` subfolder or its `index.ts` barrel) when a section only has one or two sub-components and the extra nesting adds no value.
+
 ### UI primitives
 
 `src/components/ui/` contains shadcn/ui primitives (`new-york` style, Tailwind v4, `neutral` base color, no class prefix). Path aliases (`@/components`, `@/components/ui`, `@/lib`, `@/hooks`) are defined in `components.json` and mirrored in `tsconfig.json` as `@/*` → `./src/*`. Use the shadcn CLI conventions (Radix-based, `cva` for variants, `cn()` from `@/lib/utils`) when adding new primitives rather than hand-rolling styling.
