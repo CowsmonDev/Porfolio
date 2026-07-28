@@ -10,6 +10,20 @@ interface ContactFormData {
     message: string;
 }
 
+/**
+ * El cuerpo del mail se arma como HTML, así que lo que escribe el visitante
+ * tiene que escaparse antes de interpolarse: si no, puede inyectar markup
+ * (por ejemplo un link de phishing) en el mail que recibimos.
+ */
+function escapeHtml(value: string) {
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
 export async function sendContactEmail(data: ContactFormData) {
     const { name, email, message } = data;
 
@@ -25,10 +39,10 @@ export async function sendContactEmail(data: ContactFormData) {
             subject: `Nuevo mensaje de ${name} - Portfolio`,
             html: `
                 <h2>Nuevo mensaje desde tu Portfolio</h2>
-                <p><strong>Nombre:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
+                <p><strong>Email:</strong> ${escapeHtml(email)}</p>
                 <p><strong>Mensaje:</strong></p>
-                <p>${message.replace(/\n/g, "<br>")}</p>
+                <p>${escapeHtml(message).replace(/\n/g, "<br>")}</p>
             `,
         });
 
