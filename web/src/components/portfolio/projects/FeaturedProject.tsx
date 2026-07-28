@@ -31,7 +31,7 @@ export function FeaturedProject() {
                             Plataforma full-stack de gestión de alquileres
                         </span>
                     </div>
-                    <p className="max-w-180 text-base leading-relaxed text-muted-foreground text-wrap-pretty">
+                    <p className="max-w-180 text-base leading-relaxed text-muted-foreground text-pretty">
                         Cubre el ciclo completo de una propiedad en alquiler: alta de
                         edificios y unidades, dueños y managers con permisos
                         diferenciados, reservas que se formalizan en contratos, check-in

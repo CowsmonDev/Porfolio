@@ -41,7 +41,7 @@ export function SecondaryProject() {
                     <span className="-mt-2 text-[15px] text-muted-foreground">
                         Agente conversacional de RRHH
                     </span>
-                    <p className="text-sm leading-relaxed text-muted-foreground text-wrap-pretty">
+                    <p className="text-sm leading-relaxed text-muted-foreground text-pretty">
                         Los empleados reportan conflictos hablando con un agente en vez
                         de llenar formularios: tres sub-agentes LLM conversan, extraen el
                         contexto de la charla y lo persisten, y con eso se arma el grafo
