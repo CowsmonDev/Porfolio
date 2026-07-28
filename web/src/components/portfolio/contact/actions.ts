@@ -2,8 +2,6 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 interface ContactFormData {
     name: string;
     email: string;
@@ -31,7 +29,18 @@ export async function sendContactEmail(data: ContactFormData) {
         return { success: false, error: "Todos los campos son requeridos" };
     }
 
+    // El cliente se crea acá y no a nivel de módulo: si falta la key, falla el
+    // envío y no la carga de la página entera.
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+        console.error("Falta RESEND_API_KEY: no se puede enviar el mensaje.");
+        return { success: false, error: "Error al enviar el mensaje" };
+    }
+
     try {
+        const resend = new Resend(apiKey);
+
         await resend.emails.send({
             from: "Portfolio Contact <onboarding@resend.dev>",
             to: "agustin.crespo22@gmail.com",
