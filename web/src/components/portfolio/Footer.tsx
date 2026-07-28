@@ -1,7 +1,22 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, LucideIcon } from "lucide-react";
+
+interface FooterLink {
+    label: string;
+    href: string;
+    icon: LucideIcon;
+}
+
+const footerLinks: FooterLink[] = [
+    { label: "GitHub", href: "https://github.com/CowsmonDev", icon: Github },
+    {
+        label: "LinkedIn",
+        href: "https://linkedin.com/in/agustin-crespo-dev",
+        icon: Linkedin,
+    },
+    { label: "Email", href: "mailto:agustin.crespo22@gmail.com", icon: Mail },
+];
 
 export function Footer() {
     return (
@@ -10,14 +25,13 @@ export function Footer() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     {/* Logo */}
                     <div className="flex items-center gap-4">
-                        <div className="relative h-8 w-8 overflow-hidden rounded-md">
-                            <Image
-                                src="/Logo2reducidoreducido.png"
-                                alt="Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
+                        <Image
+                            src="/Logo2reducidoreducido.png"
+                            alt="Logo"
+                            width={32}
+                            height={32}
+                            className="h-8 w-8 rounded-md object-cover"
+                        />
                         <span className="text-lg font-bold tracking-tight">
                             CowsmonDev
                         </span>
@@ -25,30 +39,34 @@ export function Footer() {
 
                     {/* Social Links */}
                     <div className="flex gap-2">
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link
-                                href="https://github.com/CowsmonDev"
-                                target="_blank"
-                            >
-                                <Github className="w-5 h-5" />
-                                <span className="sr-only">GitHub</span>
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link
-                                href="https://linkedin.com/in/agustin-crespo-dev"
-                                target="_blank"
-                            >
-                                <Linkedin className="w-5 h-5" />
-                                <span className="sr-only">LinkedIn</span>
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon" asChild>
-                            <Link href="mailto:agustin.crespo22@gmail.com">
-                                <Mail className="w-5 h-5" />
-                                <span className="sr-only">Email</span>
-                            </Link>
-                        </Button>
+                        {footerLinks.map(({ label, href, icon: Icon }) => {
+                            // El mailto abre el cliente de correo, no una pestaña.
+                            const opensInNewTab = !href.startsWith("mailto:");
+
+                            return (
+                                <Button
+                                    key={label}
+                                    variant="ghost"
+                                    size="icon"
+                                    asChild
+                                >
+                                    <a
+                                        href={href}
+                                        target={
+                                            opensInNewTab ? "_blank" : undefined
+                                        }
+                                        rel={
+                                            opensInNewTab
+                                                ? "noopener noreferrer"
+                                                : undefined
+                                        }
+                                    >
+                                        <Icon className="w-5 h-5" />
+                                        <span className="sr-only">{label}</span>
+                                    </a>
+                                </Button>
+                            );
+                        })}
                     </div>
 
                     {/* Copyright */}

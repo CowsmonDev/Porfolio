@@ -131,6 +131,11 @@
     * {
         @apply border-border outline-ring/50;
     }
+    html {
+        /* El header es fixed y mide 4rem mas su borde inferior: sin esto los
+           anclajes del nav dejan el inicio de cada seccion escondido debajo. */
+        scroll-padding-top: calc(4rem + 1px);
+    }
     body {
         @apply bg-background text-foreground;
     }
