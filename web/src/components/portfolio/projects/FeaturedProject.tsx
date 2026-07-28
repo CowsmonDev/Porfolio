@@ -1,36 +1,71 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-import { ProjectScreenCarousel } from "./featured-project/ProjectScreenCarousel";
-import { ProjectOverviewPanel } from "./featured-project/panels/ProjectOverviewPanel";
-import { ArchitecturePanel } from "./featured-project/panels/ArchitecturePanel";
-import { ConsistencyPanel } from "./featured-project/panels/ConsistencyPanel";
-import { ApprovalFlowPanel } from "./featured-project/panels/ApprovalFlowPanel";
-import { useState } from "react";
+import { Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AlquilaPointArchitecture } from "./AlquilaPointArchitecture";
+import { AlquilaPointCalendar } from "./AlquilaPointCalendar";
+import { AlquilaPointChat } from "./AlquilaPointChat";
+import { AlquilaPointEngineeringStats } from "./AlquilaPointEngineeringStats";
+import { AlquilaPointStack } from "./AlquilaPointStack";
+
+const REPO_URL = "https://github.com/CowsmonDev/ApiAlquileres/tree/DevOps";
 
 export function FeaturedProject() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    const panels = [
-        <ProjectOverviewPanel key="overview" />,
-        <ArchitecturePanel key="architecture" />,
-        <ConsistencyPanel key="consistency" />,
-        <ApprovalFlowPanel key="approval" />,
-    ];
-
     return (
-        <Card className="overflow-hidden shadow-2xl border-border p-0">
-            <div className="flex flex-col lg:flex-row min-h-125">
-                {/* Left Panel - Dynamic Content */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center lg:w-1/2 border-b lg:border-b-0 lg:border-r border-border relative">
-                    {panels[currentIndex] || panels[0]}
+        <div className="flex flex-col gap-5">
+            <div className="flex flex-col items-end justify-between gap-16 lg:flex-row">
+                <div className="flex max-w-190 flex-col gap-3.5">
+                    <div className="flex items-center gap-3">
+                        <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/45 bg-primary/12 px-2.5 py-0.5 font-mono text-[11px] font-bold tracking-wider text-primary uppercase">
+                            Proyecto destacado
+                        </span>
+                        <span className="font-mono text-xs tracking-wide text-muted-foreground">
+                            2025 — 2026
+                        </span>
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                        <h3 className="text-3xl leading-tight font-extrabold tracking-tight text-foreground">
+                            AlquilaPoint
+                        </h3>
+                        <span className="text-[17px] font-medium text-muted-foreground">
+                            Plataforma full-stack de gestión de alquileres
+                        </span>
+                    </div>
+                    <p className="max-w-180 text-base leading-relaxed text-muted-foreground text-wrap-pretty">
+                        Cubre el ciclo completo de una propiedad en alquiler: alta de
+                        edificios y unidades, dueños y managers con permisos
+                        diferenciados, reservas que se formalizan en contratos, check-in
+                        / check-out y seguimiento de pagos con comprobantes.
+                        <br />
+                        Sobre eso, un asistente de IA conversacional responde en
+                        lenguaje natural sobre el portfolio de cada usuario.
+                    </p>
                 </div>
-
-                {/* Right Panel - Carousel Container */}
-                <div className="lg:w-1/2 min-h-full bg-section-dark relative">
-                    <ProjectScreenCarousel onSlideChange={setCurrentIndex} />
+                <div className="flex shrink-0 flex-col items-end gap-3">
+                    <Button
+                        className="h-11 px-5 shadow-[0_4px_14px_0_rgba(161,18,59,0.35)]"
+                        onClick={() => window.open(REPO_URL, "_blank")}
+                    >
+                        <Github className="mr-2 h-4 w-4" />
+                        Ver Repositorio
+                    </Button>
+                    <span className="text-right font-mono text-xs text-muted-foreground">
+                        Monorepo · 4 microservicios NestJS · Next.js 16
+                    </span>
                 </div>
             </div>
-        </Card>
+
+            <div className="grid items-stretch gap-4 lg:grid-cols-[1.95fr_1fr]">
+                <AlquilaPointCalendar />
+                <AlquilaPointChat />
+            </div>
+
+            <AlquilaPointEngineeringStats />
+
+            <div className="grid items-stretch gap-4 lg:grid-cols-2">
+                <AlquilaPointArchitecture />
+                <AlquilaPointStack />
+            </div>
+        </div>
     );
 }
