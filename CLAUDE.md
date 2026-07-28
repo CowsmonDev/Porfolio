@@ -39,14 +39,21 @@ Next.js 16 App Router, single page app. `src/app/page.tsx` composes the entire h
 ### Component organization pattern
 
 Each portfolio section lives in its own folder under `src/components/portfolio/<section>/` and follows this convention:
-- A top-level `<Section>.tsx` component (client component, `"use client"`, holds section state).
-- Sub-components broken out by responsibility (e.g. `journey/components/ExperienceCard.tsx`, `DetailPanel.tsx`, `Highlights.tsx`).
-- A `shared/` folder for section-local types and static data (e.g. `journey/shared/types.ts` defines `Experience`/`CareerHighlight`, `journey/shared/data.ts` holds the actual content array).
-- An `index.ts` barrel re-exporting the public pieces of the section.
+- A top-level `<Section>.tsx` component that lays out the section and composes the rest.
+- Sub-components broken out by responsibility, flat in the section folder (e.g. `journey/TimelineEntry.tsx`, `TimelineMilestone.tsx`, `Highlights.tsx`).
+- A `shared/` folder when the section has section-local types and static data (e.g. `journey/shared/types.ts` defines `Experience`/`CareerHighlight`, `journey/shared/data.ts` holds the actual content array). `tech-stack/` follows the same shape; the smaller sections have no `shared/` at all.
+- An `index.ts` barrel re-exporting the section's entry component, which is what `src/app/page.tsx` imports via `@/components/portfolio`.
 
-`projects/` is the most nested example: `FeaturedProject.tsx` renders a two-pane layout — a `featured-project/panels/*Panel.tsx` on the left (each with a `slides/` sub-variant) driven by `currentIndex` state, and a `ProjectScreenCarousel` on the right that calls `onSlideChange` to keep them in sync.
+Most of the tree is server components. `"use client"` appears only where something actually needs it — `Header.tsx`, `contact/ContactForm.tsx`, `hero/CodeBlock.tsx`, `hero/HeroActions.tsx`, `projects/alquilapoint/Calendar.tsx`, `projects/alquilapoint/FeaturedProject.tsx`. Don't add the directive to a new section by default.
 
-When adding a new section or sub-section, follow this same folder shape rather than flattening files into one directory.
+`projects/` is the one section split further, by project rather than by responsibility, because each project owns several unrelated mock-UI panels:
+- `projects/alquilapoint/` — `FeaturedProject.tsx` plus its panels (`Calendar`, `Chat`, `Architecture`, `Stack`, `EngineeringStats`). The folder carries the project name, so the components don't repeat it.
+- `projects/nexorh/` — `SecondaryProject.tsx` and its `Chat.tsx`.
+- `projects/shared/` — presentational primitives used by both projects (`BrowserWindowChrome`, `ChatBubble`, `TechTag`). Note this is components, unlike the `shared/` folders elsewhere which hold types and data.
+
+The per-project subfolders deliberately have no `index.ts`; only `Projects.tsx` imports across the boundary, so a barrel would add indirection for two lines.
+
+When adding a new section, follow the same folder shape rather than flattening files into one directory — but see the caveat below before nesting further.
 
 **Caveat:** this codebase was originally generated in February 2026 with an early AI coding agent (Antigravity), during the initial wave of AI-assisted scaffolding tools. Treat the existing folder/component structure as a starting convention to stay consistent with, not as a proven or deliberately-designed pattern — it may contain unnecessary nesting or indirection that nobody chose on purpose. Don't propagate an existing structure into new code purely because "that's what the codebase already does." Match it when it's genuinely reasonable for the size of the section; simplify (e.g. skip a `components/` subfolder or its `index.ts` barrel) when a section only has one or two sub-components and the extra nesting adds no value.
 

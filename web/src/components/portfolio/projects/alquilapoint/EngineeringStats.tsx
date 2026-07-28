@@ -5,7 +5,7 @@ const STATS = [
     { value: "2", label: "Migraciones de base de datos", color: "#22c55e" },
 ];
 
-export function AlquilaPointEngineeringStats() {
+export function EngineeringStats() {
     return (
         <div className="grid grid-cols-[auto_repeat(4,1fr)] items-center rounded-xl border border-border bg-card">
             <div className="flex max-w-58 flex-col gap-1.5 border-r border-border px-5.5 py-4.5">

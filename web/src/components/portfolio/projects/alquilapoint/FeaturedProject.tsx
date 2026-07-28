@@ -2,11 +2,11 @@
 
 import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { AlquilaPointArchitecture } from "./AlquilaPointArchitecture";
-import { AlquilaPointCalendar } from "./AlquilaPointCalendar";
-import { AlquilaPointChat } from "./AlquilaPointChat";
-import { AlquilaPointEngineeringStats } from "./AlquilaPointEngineeringStats";
-import { AlquilaPointStack } from "./AlquilaPointStack";
+import { Architecture } from "./Architecture";
+import { Calendar } from "./Calendar";
+import { Chat } from "./Chat";
+import { EngineeringStats } from "./EngineeringStats";
+import { Stack } from "./Stack";
 
 const REPO_URL = "https://github.com/CowsmonDev/ApiAlquileres/tree/DevOps";
 
@@ -56,15 +56,15 @@ export function FeaturedProject() {
             </div>
 
             <div className="grid items-stretch gap-4 lg:grid-cols-[1.95fr_1fr]">
-                <AlquilaPointCalendar />
-                <AlquilaPointChat />
+                <Calendar />
+                <Chat />
             </div>
 
-            <AlquilaPointEngineeringStats />
+            <EngineeringStats />
 
             <div className="grid items-stretch gap-4 lg:grid-cols-2">
-                <AlquilaPointArchitecture />
-                <AlquilaPointStack />
+                <Architecture />
+                <Stack />
             </div>
         </div>
     );

@@ -1,8 +1,8 @@
 import { User, Bot, Send } from "lucide-react";
-import { BrowserWindowChrome } from "./BrowserWindowChrome";
-import { ChatBubble } from "./ChatBubble";
+import { BrowserWindowChrome } from "../shared/BrowserWindowChrome";
+import { ChatBubble } from "../shared/ChatBubble";
 
-export function AlquilaPointChat() {
+export function Chat() {
     return (
         <BrowserWindowChrome url="app.alquilapoint.com/chat">
             <div className="flex min-h-0 flex-1 flex-col bg-[#f6f7f9]">

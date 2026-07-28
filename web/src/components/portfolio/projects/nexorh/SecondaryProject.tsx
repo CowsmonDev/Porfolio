@@ -1,6 +1,6 @@
 import { Github, Lock } from "lucide-react";
-import { NexoRHChat } from "./NexoRHChat";
-import { TechTag } from "./TechTag";
+import { Chat } from "./Chat";
+import { TechTag } from "../shared/TechTag";
 
 const STATS = [
     { value: "14", label: "hallazgos remediados", color: "#f59e0b" },
@@ -89,7 +89,7 @@ export function SecondaryProject() {
                     </div>
                 </div>
 
-                <NexoRHChat />
+                <Chat />
             </div>
         </div>
     );

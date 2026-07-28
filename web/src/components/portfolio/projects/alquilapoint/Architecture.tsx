@@ -36,7 +36,7 @@ function DbBox({ label, color }: { label: string; color: string }) {
     );
 }
 
-export function AlquilaPointArchitecture() {
+export function Architecture() {
     return (
         <div className="flex flex-col overflow-hidden rounded-xl border border-border bg-code-bg">
             <div className="flex items-center justify-between gap-3 border-b border-border bg-card px-3.5 py-2.5">

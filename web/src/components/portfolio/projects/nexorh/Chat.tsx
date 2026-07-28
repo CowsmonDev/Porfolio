@@ -1,8 +1,8 @@
 import { Bot, Send, User } from "lucide-react";
-import { BrowserWindowChrome } from "./BrowserWindowChrome";
-import { ChatBubble } from "./ChatBubble";
+import { BrowserWindowChrome } from "../shared/BrowserWindowChrome";
+import { ChatBubble } from "../shared/ChatBubble";
 
-export function NexoRHChat() {
+export function Chat() {
     return (
         <BrowserWindowChrome url="nexorh.app/asistente">
             <div className="flex flex-col bg-[#f7f8fa]">

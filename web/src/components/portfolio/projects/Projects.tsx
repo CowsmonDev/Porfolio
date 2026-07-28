@@ -1,5 +1,5 @@
-import { FeaturedProject } from "./FeaturedProject";
-import { SecondaryProject } from "./SecondaryProject";
+import { FeaturedProject } from "./alquilapoint/FeaturedProject";
+import { SecondaryProject } from "./nexorh/SecondaryProject";
 
 export function Projects() {
     return (

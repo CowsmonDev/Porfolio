@@ -13,7 +13,7 @@ import {
     Plus,
     Users,
 } from "lucide-react";
-import { BrowserWindowChrome } from "./BrowserWindowChrome";
+import { BrowserWindowChrome } from "../shared/BrowserWindowChrome";
 
 type ReservationKey = "a1" | "a2";
 
@@ -108,7 +108,7 @@ const SIDEBAR_ICONS = [
     { icon: MessageSquare, active: false },
 ];
 
-export function AlquilaPointCalendar() {
+export function Calendar() {
     const [selected, setSelected] = useState<ReservationKey>("a2");
 
     return (
