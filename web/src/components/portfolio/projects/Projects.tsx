@@ -3,7 +3,10 @@ import { SecondaryProject } from "./SecondaryProject";
 
 export function Projects() {
     return (
-        <section id="projects" className="py-20 bg-background">
+        <section
+            id="projects"
+            className="py-24 bg-background border-t border-border"
+        >
             <div className="mx-auto max-w-360 w-full px-4 lg:px-12">
                 <div className="flex flex-col gap-8">
                     {/* Section Header */}
