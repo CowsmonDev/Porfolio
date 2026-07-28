@@ -1,32 +1,21 @@
 "use client";
 
-import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
 export function ModeToggle() {
-    const [mounted, setMounted] = React.useState(false);
-    const { theme, setTheme } = useTheme();
+    const { resolvedTheme, setTheme } = useTheme();
 
-    // Evitar hydration mismatch
-    React.useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) {
-        return (
-            <Button variant="ghost" size="icon" className="relative">
-                <Sun className="h-5 w-5" />
-            </Button>
-        );
-    }
-
+    // Los dos iconos se renderizan siempre y se alternan por CSS segun la clase
+    // que next-themes pone en <html>. Asi el arbol es igual en servidor y
+    // cliente: si cambiara de forma al montar, correria el contador de useId y
+    // rompería la hidratacion de los componentes de Radix que vengan despues.
     return (
         <Button
             variant="ghost"
             size="icon"
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
             className="relative"
         >
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

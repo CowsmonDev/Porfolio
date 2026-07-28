@@ -36,6 +36,14 @@ export function ContactForm() {
         }
     }
 
+    // Al retomar la escritura, el resultado del envío anterior ya no aplica.
+    function clearPreviousResult() {
+        if (status === "success" || status === "error") {
+            setStatus("idle");
+            setErrorMessage("");
+        }
+    }
+
     return (
         <div className="flex flex-col gap-8">
             <div>
@@ -47,7 +55,11 @@ export function ContactForm() {
                     formulario o conecta por redes.
                 </p>
             </div>
-            <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+            <form
+                className="flex flex-col gap-6"
+                onSubmit={handleSubmit}
+                onChange={clearPreviousResult}
+            >
                 <div className="flex flex-col gap-2">
                     <Label htmlFor="name">Nombre</Label>
                     <Input

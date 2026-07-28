@@ -13,32 +13,34 @@ export function AboutBio() {
 
                 <div className="text-muted-foreground text-lg leading-relaxed space-y-6">
                     <p>
-                        Mi camino en la programación comenzó en{" "}
+                        Soy{" "}
                         <strong className="text-foreground">
-                            4° año de secundaria (2016)
+                            desarrollador full-stack
                         </strong>
-                        , donde descubrí la lógica computacional y empecé a
-                        resolver problemas con código. Esa curiosidad me llevó a
-                        estudiar{" "}
+                        : diseño la arquitectura del backend, la llevo hasta la
+                        interfaz y hoy sumo{" "}
                         <strong className="text-foreground">
-                            Ingeniería en Sistemas
+                            agentes de IA
                         </strong>{" "}
-                        en la universidad, donde profundicé en fundamentos
-                        teóricos, estructuras de datos y arquitectura de
-                        software.
+                        como una pieza más del sistema — no como un
+                        experimento aparte. En AlquilaPoint eso significó
+                        cuatro microservicios, un frontend Next.js y un
+                        asistente conversacional que responde sobre datos
+                        reales respetando los permisos de cada usuario.
                     </p>
                     <p>
-                        Pero el aprendizaje no terminó en las aulas. De forma{" "}
-                        <strong className="text-foreground">autodidacta</strong>
-                        , mis conocimientos previos me permitieron profundizar
-                        en tecnologías modernas: patrones de diseño,
-                        arquitecturas escalables, y las mejores prácticas de la
-                        industria. Esta combinación de{" "}
+                        Empecé a programar en{" "}
                         <strong className="text-foreground">
-                            educación formal y exploración independiente
+                            4° año de secundaria (2016)
                         </strong>{" "}
-                        me permite abordar proyectos con una visión integral y
-                        actualizada.
+                        y seguí con{" "}
+                        <strong className="text-foreground">
+                            Ingeniería en Sistemas
+                        </strong>
+                        , pero la mayor parte de lo que uso a diario lo
+                        aprendí construyendo: patrones, arquitecturas que
+                        escalan, LangChain y modelos, documentando cada
+                        decisión en ADRs y RFCs para poder defenderla después.
                     </p>
                 </div>
             </div>

@@ -25,7 +25,7 @@ export function Hero() {
                         <HeroTitle
                             title="Hola, soy"
                             highlight="Agustín Crespo"
-                            subtitle="Ingeniero de Software especializado en construir Sistemas Distribuidos escalables y Arquitecturas Backend de alto rendimiento."
+                            subtitle="Desarrollador full-stack: diseño la arquitectura, la llevo hasta la interfaz y sumo agentes de IA como una pieza más del sistema."
                         />
 
                         <HeroActions />

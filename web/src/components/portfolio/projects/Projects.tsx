@@ -1,44 +1,27 @@
-"use client";
-
-import { FeaturedProject } from "./FeaturedProject";
-import { Project, ProjectAcordionItem } from "./ProjectAcordionItem";
-import { AuthLeft, AuthRight } from "./project-auth";
-import { Accordion } from "../../ui/accordion";
-
-const projects: Project[] = [];
+import { FeaturedProject } from "./alquilapoint/FeaturedProject";
+import { SecondaryProject } from "./nexorh/SecondaryProject";
 
 export function Projects() {
     return (
-        <section id="projects" className="py-20 bg-background">
+        <section
+            id="projects"
+            className="py-24 bg-background border-t border-border"
+        >
             <div className="mx-auto max-w-360 w-full px-4 lg:px-12">
                 <div className="flex flex-col gap-8">
                     {/* Section Header */}
-                    <div className="flex flex-col gap-6">
+                    <div className="flex flex-col items-center gap-5 text-center">
                         <div className="flex items-center gap-2 text-primary font-mono text-sm font-bold tracking-widest uppercase">
-                            <span className="w-2 h-2 rounded-full bg-primary" />
+                            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                             En Producción
                         </div>
-                        <h2 className="text-4xl md:text-4xl font-black leading-tight">
+                        <h2 className="text-4xl md:text-6xl font-black leading-tight tracking-tight">
                             Proyectos
                         </h2>
                     </div>
 
-                    {/* Featured Project Card */}
                     <FeaturedProject />
-
-                    {/* Project Accordions */}
-                    <Accordion
-                        type="single"
-                        collapsible
-                        className="flex flex-col gap-4"
-                    >
-                        {projects.map((project) => (
-                            <ProjectAcordionItem
-                                key={project.id}
-                                project={project}
-                            />
-                        ))}
-                    </Accordion>
+                    <SecondaryProject />
                 </div>
             </div>
         </section>
